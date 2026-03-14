@@ -1,0 +1,69 @@
+##################################################
+#/
+#/        bisher nur angepasste kopie von circle_packing.
+#/        noch für mein example verändern, vorallem prompt
+#/ 
+##################################################
+
+
+#run instruction phase 2:
+#python openevolve-run.py examples/circle_packing/openevolve_output/checkpoints/checkpoint_100/best_program.py \
+#  examples/circle_packing/evaluator.py \
+#  --config examples/circle_packing/config_my_ollama_p2.yaml \
+#  --iterations 100
+
+#-------------------------------------------------------------------------------
+
+# Configuration for breaking through the circle packing plateau
+max_iterations: 100
+checkpoint_interval: 10
+log_level: "INFO"
+
+# LLM configuration
+llm:
+  provider: "ollama"            
+  primary_model: "llama3.1"     
+  primary_model_weight: 1.0 
+  secondary_model: null
+  secondary_model_weight: 0.0
+  temperature: 0.7
+  top_p: 0.95
+  max_tokens: 4096
+  timeout: 600
+
+
+# Prompt configuration
+prompt:
+  system_message: |
+    You are an expert in computer science specializing in sorting algorithms. Try to improve the runtime of the given sorting algorithm as much as possible.
+    The current algorithm has a runtime of n squared.
+    The unsorted input is a list with random values, it is possible that the list contains the same value multiple times.
+    The list has to be sorted from smallest to highest value
+    You have to call the function "count_compares()" whenever your algorithm compares two values
+    If you use the comperator ">" use the function "count_swaps()" instead. a > b becomes count_swaps(a,b)
+
+    
+    Focus on breaking through the plateau by trying fundamentally different approaches - don't just tweak parameters.
+  num_top_programs: 4
+  use_template_stochasticity: true
+
+# Database configuration
+database:
+  population_size: 70  # Larger population for more diversity
+  archive_size: 30
+  num_islands: 5
+  elite_selection_ratio: 0.3
+  exploitation_ratio: 0.6  # Slightly lower to encourage exploration
+
+# Evaluator configuration
+evaluator:
+  timeout: 90  # Extended timeout to allow for more complex optimization
+  cascade_evaluation: true
+  cascade_thresholds: [0.5, 0.8]
+  parallel_evaluations: 4
+  use_llm_feedback: false
+
+# Evolution settings
+diff_based_evolution: false
+allow_full_rewrites: true  # Definitely allow full rewrites
+max_code_length: 100000
