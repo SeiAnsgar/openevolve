@@ -2,7 +2,7 @@
 
 import numpy as np
 
-def my_problem(rl):
+def my_sort(rl):
     
     for i in range(len(rl)):
         for k in range(len(rl)-1):
@@ -20,17 +20,16 @@ def count_swaps(a: int, b:int):
     return a > b
 
 
+
 if __name__ == "__main__":
     
     rng = np.random.default_rng()
     input_list = rng.integers(200, size=200)
     
     compares = [0]
-    compares[0] = 0
     swaps = [0]
-    swaps[0] = 0
 
-    my_problem(input_list)
+    my_sort(input_list)
 
     print(input_list)
     print("\n")
