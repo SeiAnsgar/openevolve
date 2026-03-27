@@ -18,7 +18,9 @@ def evaluate(program_path: str)
 import numyp as np
 from openevolve.evaluation_result import EvaluationResult
 
-def load_program(program_path):
+
+
+def load_program(program_path: str):
     spec = importlib.util.spec_from_file_location("program", program_path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
@@ -33,22 +35,11 @@ def evaluate(program_path: str) -> EvaluationResult:
     """
 
 
-    compares = [0]
-    compares[0] = 0
-    swaps = [0]
-    swaps[0] = 0
-
-    def count_swaps(a: int, b:int):
-        compares[0] += 1
-    if(a > b):
-        swaps[0]+=1;
-    return a > b
-
+    compares_eval = [0]
+    swaps_eval = [0]
 
     return {"Swaps: ":swaps[0],
             "compares:" compares[0]
-        
-
     }
 
 def generate_test_data():
@@ -70,11 +61,32 @@ def generate_baseline_results():
     #fill dictionary -> test_case_x{(comps,swaps)}
 
 
-def my_problem(rl):    
+def is_sorted(validate_this):
+    bool is_sorted = 1
+    for i in (len(validate_this)-1):
+        if(validate_this[i] > validate_this[i+1]):
+            is_sorted = 0
+    return is_sorted
+
+#------------------------------------------------------------------
+def count_compares(metrics):
+    metrics[0]+=1
+
+def count_swaps(a: int, b:int, metrics):
+    if(a > b):
+        metrics[1]+=1;
+
+#use this to get baseline metrics
+def my_sort(rl: list[int]) -> list[int]: 
+    #compares | swaps
+    metrics = [0,0]
     for i in range(len(rl)):
         for k in range(len(rl)-1):
-            count_compares()
-            if count_swaps(rl[k], rl[k+1]):
+            count_compares(metrics)
+            if count_swaps(rl[k], rl[k+1], metrics):
+                metrics[1]+=1
                 temp = rl[k]
                 rl[k] = rl[k+1]
                 rl[k+1] = temp
+    return metrics
+
