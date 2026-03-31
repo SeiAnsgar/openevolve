@@ -2,24 +2,26 @@
 
 import numpy as np
 
-def my_sort(rl):
-    
+def sorting_algorithm(rl: list[int]) -> list[int]: 
+    #compares | swaps
+    metrics = [0,0]
     for i in range(len(rl)):
         for k in range(len(rl)-1):
-            count_compares()
-            if count_swaps(rl[k], rl[k+1]):
+            count_compares(metrics)
+            if count_swaps(rl[k], rl[k+1], metrics):
+                metrics[1]+=1
                 temp = rl[k]
                 rl[k] = rl[k+1]
                 rl[k+1] = temp
+    return metrics
 # EVOLVE-BLOCK-END
 
-def count_swaps(a: int, b:int):
-        compares[0] += 1
+def count_compares(metrics):
+    metrics[0]+=1
+
+def count_swaps(a: int, b:int, metrics):
     if(a > b):
-        swaps[0]+=1;
-    return a > b
-
-
+        metrics[1]+=1;
 
 if __name__ == "__main__":
     
@@ -29,7 +31,7 @@ if __name__ == "__main__":
     compares = [0]
     swaps = [0]
 
-    my_sort(input_list)
+    sorting_algorithm(input_list)
 
     print(input_list)
     print("\n")
