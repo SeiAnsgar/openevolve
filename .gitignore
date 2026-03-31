@@ -56,3 +56,8 @@ htmlcov/
 # For SR
 secrets.yaml
 problems
+
+#by SeiAnsgar
+sorting_in_c.c
+a.out
+testingrange.py

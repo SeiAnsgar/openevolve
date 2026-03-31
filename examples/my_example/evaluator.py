@@ -1,25 +1,16 @@
 """
 evaluator for my problem
 
-general evaluator structure:
-
-
-import <..>
-
-def timeout_handling (optional? -> can be run with or without timeout condition)
-
-def evaluate(program_path: str)
-    bekanntes optimum als baseline nehmen
-
-    try:
-        load problem
+EvaluationResult Class from OpenEvolve:
+    has wrapper function 
 """
 
 import numyp as np
+import traceback
 from openevolve.evaluation_result import EvaluationResult
 
 
-
+#is this really needed? -> only if this functionality should be encapsulated
 def load_program(program_path: str):
     spec = importlib.util.spec_from_file_location("program", program_path)
     mod = importlib.util.module_from_spec(spec)
@@ -27,48 +18,156 @@ def load_program(program_path: str):
     return mod
 
 def evaluate(program_path: str) -> EvaluationResult:
-    """
-        evaluate..
-        - run programm with test_case[]
-            -> catch errors and execptions
-        - check for runtim -> after certain time, call timeout
-    """
-
-
-    compares_eval = [0]
-    swaps_eval = [0]
-
-    return {"Swaps: ":swaps[0],
-            "compares:" compares[0]
-    }
-
-def generate_test_data():
-
-    test_cases = [random_list_p2, random_list_p3, random_list_p4, random_list_p5, random_list_p6, equal_list, sorted_list]
-    rng = np.random.default_rng()
-    random_list_p2 = rng.integers(100, size=100)
-    random_list_p3 = rng.integer(1000, size=1000)
-    random_list_p4 = rng.integer(10000, size=10000)
-    random_list_p5 = rng.integer(100000, size=100000)
-    random_list_p6 = rng.integer(1000000, size=1000000)
-
-    #test edge cases
-    equal_list = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-    for i in range(1000):
-        sorted_list = i
     
-def generate_baseline_results():
-    #fill dictionary -> test_case_x{(comps,swaps)}
+    #structure
+    metrics={
+        "compare_score_small": 0.0,
+        "compare_score_large": 0.0,
+        "swap_score_small": 0.0,
+        "swap_score_large": 0.0,
+        "combined_score": 0.0,
+        "error": "some kind of error",
+    }
+    """
+
+        EvaluationResult is Dict[str:float]
+
+        evaluate..
+        -does code work:
+        ->try: any syntax errors?    -ok
+        ->try: program takes list/works on list
+        ->try: any runtime errors? e.g index
+        
+        ->try: output is benchmark[comp,swap]
+            
+
+        ->no timeout
+        ->is list sorted?
+
+        -is code better:
+        ->comapre with baseline_random
+        #if better or equal:
+        ->compare with other examples
+    """
+    test_collection = generate_test_data()
+
+    
+    """
+    try this 1:
+    LET:
+        alle syntax tests wurden bestanden, kein runtime error, input und output format passen
+        -> der generierte algorithmus kann listen annhemen und verarbeitet sie, ohne dass er abstürzt
+    test_collection = generate_test_data()
+    create copy of test_collection
+    SEI: generierter algorithmus := ai_sort()
+    CALL ai_sort() for each list in test_collection_cpy
+    CALL is_sorted() for each list in test_collection_cpy
+    """
+    """
+    try this 2:
+    LET:
+        ai_sort() is sorting everyting correctly
+    CALL my_sort() for each test of test_collection -> baseline
+    compare result of my_sort with result of ai_sort() -> create EvaluationResult
+    """
+
+
+
+    try:
+        spec = importlib.util.spec_from_file_location("program", program_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        try:
+            #placeholder vlaues
+            comp=0
+            swap=0
+            benchmark = [comp, swap]
+            
+            if (isinstance(benchmark, list) and len(benchmark) == 2):
+                print("ai_sort() has correct output format")    
+            else:
+                print("error")
+                #leave evaluate, ADD LATER
+            pass
+        finally:  
+            pass
+        #initialize test-data:
+        test_collection = generate_test_data()
+
+        #generate baseline:
+
+    #look up what exactly this this code does (exception handling duh.. but check detailed meaning of syntax)
+    except Exception as e:
+        print(f"Evaluation failed at most basic step: {str(e)}")
+        print(traceback.format_exec())
+        
+        error_artifacts = {
+            "error_type": type(e).__name__,
+            "error_message": str(e),
+            "full_traceback": traceback.format_exc(),
+            "suggestion": "Check for syntax errors in generated code."
+        }
+
+        return EvaluationResult(
+            metrics={
+                "compare_score_small": 0.0,
+                "compare_score_large": 0.0,
+                "swap_score_small": 0.0,
+                "swap_score_large": 0.0,
+                "combined_score": 0.0,
+                "error": str(e),
+            },
+            artifacts=error_artifacts
+        )
+
+
+
+    #placeholder until later
+    some_dict = {}
+    some_error_artifacts = {}
+    return EvaluationResult(some_dict, some_error_artifacts)
+
+
+#------------------------------------helper function------------------------------
+def generate_test_data() -> list:
+    rng = np.random.default_rng()
+    test_cases = []
+    test_cases.append(rng.integers(100, size=100))
+    test_cases.append(rng.integers(500, size=200))
+    test_cases.append(rng.integers(1000, size=1000))
+    test_cases.append(rng.integers(2000, size=2000))
+    #test_cases.append(rng.integers(4000, size=4000))
+    #test edge cases
+    test_cases.append([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]) 
+    sorted_list = []
+    for i in range(500):
+        sorted_list.append(i)
+    test_cases.append(sorted_list)
+    print("generating done!\n")
+
+    return test_cases
 
 
 def is_sorted(validate_this):
-    bool is_sorted = 1
+    is_sorted = 1
     for i in (len(validate_this)-1):
         if(validate_this[i] > validate_this[i+1]):
             is_sorted = 0
     return is_sorted
 
-#------------------------------------------------------------------
+#call this function for the generated code
+def generate_results(test_collection: list) -> dict:
+    """
+    just concept, correct syntax later
+    dict metrics = {}
+
+    for l in test_collection:
+        metrics.add(my_sort(l))
+    """
+    pass
+
+#-----------------------------------algorithm core-------------------------------
 def count_compares(metrics):
     metrics[0]+=1
 
@@ -79,14 +178,22 @@ def count_swaps(a: int, b:int, metrics):
 #use this to get baseline metrics
 def my_sort(rl: list[int]) -> list[int]: 
     #compares | swaps
-    metrics = [0,0]
+    benchmark = [0,0]
     for i in range(len(rl)):
         for k in range(len(rl)-1):
-            count_compares(metrics)
-            if count_swaps(rl[k], rl[k+1], metrics):
-                metrics[1]+=1
+            count_compares(benchmark)
+            if count_swaps(rl[k], rl[k+1], benchmark):
+                benchmark[1]+=1
                 temp = rl[k]
                 rl[k] = rl[k+1]
                 rl[k+1] = temp
-    return metrics
+    return benchmark
+
+def is_sorted(validate_this):
+    is_sorted = 1
+    for i in (len(validate_this)-1):
+        if(validate_this[i] > validate_this[i+1]):
+            is_sorted = 0
+    return is_sorted
+
 
