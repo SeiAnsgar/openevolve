@@ -28,28 +28,24 @@ def evaluate(program_path: str) -> EvaluationResult:
         "combined_score": 0.0,
         "error": "some kind of error",
     }
+
+    error_artifacts = {
+                "error_type": "",
+                "error_message": "",
+                "suggestion": ""
+            }
     """
 
         EvaluationResult is Dict[str:float]
-
-        evaluate..
-        -does code work:
-        ->try: any syntax errors?    -ok
-        ->try: program takes list/works on list
-        ->try: any runtime errors? e.g index
-        
-        ->try: output is benchmark[comp,swap]
             
 
         ->no timeout
-        ->is list sorted?
 
         -is code better:
         ->comapre with baseline_random
         #if better or equal:
         ->compare with other examples
     """
-    test_collection = generate_test_data()
 
     
     """
@@ -84,20 +80,60 @@ def evaluate(program_path: str) -> EvaluationResult:
             swap=0
             benchmark = [comp, swap]
             
+            #has ai_search() correct return type?
             if (isinstance(benchmark, list) and len(benchmark) == 2):
                 print("ai_sort() has correct output format")    
-            else:
-                print("error")
-                #leave evaluate, ADD LATER
-            pass
+                #check if ai_sort() actually works -> check if sorted lists are sorted
+            else:   
+                error_artifacts = {
+                "error_type": "Wrong return type",
+                "error_message": "Return value is not the required type: [int, int]",
+                "suggestion": "enforce usage of correct type"
+                }
+
+                return EvaluationResult(
+                    metrics={
+                        "compare_score_small": 0.0,
+                        "compare_score_large": 0.0,
+                        "swap_score_small": 0.0,
+                        "swap_score_large": 0.0,
+                        "combined_score": 0.0,
+                        "error": "Wrong return type",
+                    },
+                    artifacts=error_artifacts
+                )
         finally:  
             pass
+        
+
         #initialize test-data:
         test_collection = generate_test_data()
+        test_collection_cpy = test_collection
+    
+        #ai_sort() is a placeholder for the name of the generated algorithm
+        ai_sort_results = []
+        ai_sort_results.append(ai_sort())
 
-        #generate baseline:
+        #at least on list isnt sorted
+        for l in test_collection:
+            if (is_sorted(test_collection[l]) == 0):
+                return EvaluationResult(
+                    metrics={
+                        "compare_score_small": 0.0,
+                        "compare_score_large": 0.0,
+                        "swap_score_small": 0.0,
+                        "swap_score_large": 0.0,
+                        "combined_score": 0.0,
+                        "error": "List not sorted",
+                    },
+                    artifacts=error_artifacts
+                )
 
-    #look up what exactly this this code does (exception handling duh.. but check detailed meaning of syntax)
+
+
+
+
+
     except Exception as e:
         print(f"Evaluation failed at most basic step: {str(e)}")
         print(traceback.format_exec())
@@ -188,12 +224,5 @@ def my_sort(rl: list[int]) -> list[int]:
                 rl[k] = rl[k+1]
                 rl[k+1] = temp
     return benchmark
-
-def is_sorted(validate_this):
-    is_sorted = 1
-    for i in (len(validate_this)-1):
-        if(validate_this[i] > validate_this[i+1]):
-            is_sorted = 0
-    return is_sorted
 
 
