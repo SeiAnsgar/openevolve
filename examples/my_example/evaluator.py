@@ -1,11 +1,9 @@
 """
-evaluator for my problem
-
 EvaluationResult Class from OpenEvolve:
     has wrapper function 
 """
 
-import numyp as np
+import numpy as np
 import traceback
 from openevolve.evaluation_result import EvaluationResult
 
@@ -45,26 +43,15 @@ def evaluate(program_path: str) -> EvaluationResult:
         ->comapre with baseline_random
         #if better or equal:
         ->compare with other examples
-    """
 
-    
-    """
-    try this 1:
-    LET:
-        alle syntax tests wurden bestanden, kein runtime error, input und output format passen
-        -> der generierte algorithmus kann listen annhemen und verarbeitet sie, ohne dass er abstürzt
-    test_collection = generate_test_data()
-    create copy of test_collection
-    SEI: generierter algorithmus := ai_sort()
-    CALL ai_sort() for each list in test_collection_cpy
-    CALL is_sorted() for each list in test_collection_cpy
-    """
-    """
-    try this 2:
-    LET:
-        ai_sort() is sorting everyting correctly
-    CALL my_sort() for each test of test_collection -> baseline
-    compare result of my_sort with result of ai_sort() -> create EvaluationResult
+    #####################################TODO:###################################
+    -make copy of all tests -> tests_copy
+    -call ai_sort() for tests_copy ->safe resuls in ai_sort_results{}
+    -call is_sorted() for all results -> retun if failed or else results 
+
+    -call my_sort() for all tests 
+    -save results in my_sort_results{}
+
     """
 
 
@@ -102,37 +89,45 @@ def evaluate(program_path: str) -> EvaluationResult:
                     },
                     artifacts=error_artifacts
                 )
-        finally:  
-            pass
         
 
-        #initialize test-data:
-        test_collection = generate_test_data()
-        test_collection_cpy = test_collection
-    
-        #ai_sort() is a placeholder for the name of the generated algorithm
-        ai_sort_results = []
-        ai_sort_results.append(ai_sort())
+            #initialize test-data:
+            test_collection = generate_test_data()
+            test_collection_cpy = test_collection[:]
 
-        #at least on list isnt sorted
-        for l in test_collection:
-            if (is_sorted(test_collection[l]) == 0):
+            #generate baseline results
+            my_sort_results = []
+            for l in test_collection_cpy:
+                my_sort_results.append(my_sort(l))
+
+            #generate ai_sort() results
+            #ai_sort() is a placeholder for the name of the generated algorithm
+            ai_sort_results = []
+            for l in test_collection:
+                ai_sort_results.append(ai_sort(l))
+
+            #check if ai_sort() sorted correctly
+            is_sorted=0
+            for check_sorted in test_collection_cpy:
+                sorted_amount = is_sorted(check_sorted)
+            if is_sorted == 0:
                 return EvaluationResult(
-                    metrics={
-                        "compare_score_small": 0.0,
-                        "compare_score_large": 0.0,
-                        "swap_score_small": 0.0,
-                        "swap_score_large": 0.0,
-                        "combined_score": 0.0,
-                        "error": "List not sorted",
-                    },
-                    artifacts=error_artifacts
-                )
+                        metrics={
+                            "compare_score_small": 0.0,
+                            "compare_score_large": 0.0,
+                            "swap_score_small": 0.0,
+                            "swap_score_large": 0.0,
+                            "combined_score": 0.0,
+                            "error": "List not sorted",
+                        },
+                        artifacts=error_artifacts
+                    )
+
+        #TODO: ADD comparison between results              
 
 
-
-
-
+        finally:
+            pass
 
     except Exception as e:
         print(f"Evaluation failed at most basic step: {str(e)}")
@@ -187,7 +182,7 @@ def generate_test_data() -> list:
 
 def is_sorted(validate_this):
     is_sorted = 1
-    for i in (len(validate_this)-1):
+    for i in range((len(validate_this)-1)):
         if(validate_this[i] > validate_this[i+1]):
             is_sorted = 0
     return is_sorted
