@@ -2,7 +2,6 @@
 EvaluationResult Class from OpenEvolve:
     has wrapper function 
 """
-
 import numpy as np
 import traceback
 from openevolve.evaluation_result import EvaluationResult
@@ -33,9 +32,7 @@ def evaluate(program_path: str) -> EvaluationResult:
                 "suggestion": ""
             }
     """
-
-        EvaluationResult is Dict[str:float]
-            
+        EvaluationResult is Dict[str:float]     
 
         ->no timeout
 
@@ -45,15 +42,8 @@ def evaluate(program_path: str) -> EvaluationResult:
         ->compare with other examples
 
     #####################################TODO:###################################
-    -make copy of all tests -> tests_copy
-    -call ai_sort() for tests_copy ->safe resuls in ai_sort_results{}
-    -call is_sorted() for all results -> retun if failed or else results 
-
-    -call my_sort() for all tests 
-    -save results in my_sort_results{}
-
+    ADD comparison between results              
     """
-
 
 
     try:
@@ -124,7 +114,12 @@ def evaluate(program_path: str) -> EvaluationResult:
                     )
 
         #TODO: ADD comparison between results              
+        """
+        generate metrics for my_results
+        generate metrics for ai_results
 
+        compare metrics, return what? -> return score only if its better than baseline
+        """
 
         finally:
             pass
@@ -165,7 +160,7 @@ def generate_test_data() -> list:
     rng = np.random.default_rng()
     test_cases = []
     test_cases.append(rng.integers(100, size=100))
-    test_cases.append(rng.integers(500, size=200))
+    test_cases.append(rng.integers(200, size=200))
     test_cases.append(rng.integers(1000, size=1000))
     test_cases.append(rng.integers(2000, size=2000))
     #test_cases.append(rng.integers(4000, size=4000))
@@ -187,16 +182,32 @@ def is_sorted(validate_this):
             is_sorted = 0
     return is_sorted
 
-#call this function for the generated code
-def generate_results(test_collection: list) -> dict:
-    """
-    just concept, correct syntax later
-    dict metrics = {}
+def calculate_metric(my_results, ai_results):
+    #[comp_score, swap_score]
+    compare_score_small = (my_results[0][0] + my_results[1][0])  - (ai_results[0][0] + ai_results[1][0])
+    compare_score_large = (my_results[2][0] + my_results[3][0]) - (ai_results[2][0] + ai_results[3][0])
+    swap_score_small = (my_results[0][1] + my_results[1][1]) - (ai_results[0][1] + ai_results[1][1])
+    swap_score_large = (my_results[2][1] + my_results[3][1]) - (ai_results[2][1] + ai_results[3][1])
+    combined = 0.0
 
-    for l in test_collection:
-        metrics.add(my_sort(l))
-    """
-    pass
+    compare_score_small = 0.0
+    compare_score_large = 0.0
+    swap_score_small = 0.0
+    swap_score_large = 0.0
+    combined = 0.0
+
+
+    return EvaluationResult(
+            metrics={
+                "compare_score_small": compare_score_small,
+                "compare_score_large": compare_score_large,
+                "swap_score_small": swap_score_small,
+                "swap_score_large": swap_score_large,
+                "combined_score": combined,
+                "error": "no error found",
+            },
+            artifacts=error_artifacts
+        )
 
 #-----------------------------------algorithm core-------------------------------
 def count_compares(metrics):
