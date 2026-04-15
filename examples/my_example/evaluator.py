@@ -2,20 +2,15 @@
 EvaluationResult Class from OpenEvolve:
     has wrapper function 
 """
+import importlib.util
 import numpy as np
 import traceback
 from openevolve.evaluation_result import EvaluationResult
 
 
-#is this really needed? -> only if this functionality should be encapsulated
-def load_program(program_path: str):
-    spec = importlib.util.spec_from_file_location("program", program_path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
-
 def evaluate(program_path: str) -> EvaluationResult:
     
+    """
     #structure
     metrics={
         "compare_score_small": 0.0,
@@ -31,18 +26,14 @@ def evaluate(program_path: str) -> EvaluationResult:
                 "error_message": "",
                 "suggestion": ""
             }
-    """
-        EvaluationResult is Dict[str:float]     
-
-        ->no timeout
-
-        -is code better:
-        ->comapre with baseline_random
-        #if better or equal:
-        ->compare with other examples
-
+    
     #####################################TODO:###################################
-    ADD comparison between results              
+    reference "ai_sort()" correctly
+
+
+    normalerweise:
+    program.function_name()
+    ->
     """
 
 
@@ -51,78 +42,68 @@ def evaluate(program_path: str) -> EvaluationResult:
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
 
-        try:
-            #placeholder vlaues
-            comp=0
-            swap=0
-            benchmark = [comp, swap]
-            
-            #has ai_search() correct return type?
-            if (isinstance(benchmark, list) and len(benchmark) == 2):
-                print("ai_sort() has correct output format")    
-                #check if ai_sort() actually works -> check if sorted lists are sorted
-            else:   
-                error_artifacts = {
-                "error_type": "Wrong return type",
-                "error_message": "Return value is not the required type: [int, int]",
-                "suggestion": "enforce usage of correct type"
-                }
+        #placeholder vlaues
+        comp=0
+        swap=0
+        benchmark = [comp, swap]
+        
+        #has ai_search() correct return type?
+        if (isinstance(benchmark, list) and len(benchmark) == 2):
+            print("ai_sort() has correct output format")    
+            #check if ai_sort() actually works -> check if sorted lists are sorted
+        else:   
+            error_artifacts = {
+            "error_type": "Wrong return type",
+            "error_message": "Return value is not the required type: [int, int]",
+            "suggestion": "enforce usage of correct type"
+            }
 
-                return EvaluationResult(
+            return EvaluationResult(
+                metrics={
+                    "compare_score_small": 0.0,
+                    "compare_score_large": 0.0,
+                    "swap_score_small": 0.0,
+                    "swap_score_large": 0.0,
+                    "combined_score": 0.0,
+                    "error": "Wrong return type",
+                },
+                artifacts=error_artifacts
+            )
+    
+
+        #initialize test-data:
+        test_collection = generate_test_data()
+        test_collection_cpy = test_collection[:]
+
+        #generate baseline results
+        my_sort_results = []
+        for l in test_collection_cpy:
+            my_sort_results.append(my_sort(l))
+
+        #generate ai_sort() results
+        #ai_sort() is a placeholder for the name of the generated algorithm
+        ai_sort_results = []
+        for l in test_collection:
+            ai_sort_results.append(mod.sorting_algorithm(l)) #->ai_search() ~> mod.sorting_algorithm()
+
+        #check if ai_sort() sorted correctly
+        is_sorted=0
+        for check_sorted in test_collection_cpy:
+            sorted_amount = is_sorted(check_sorted)
+        if is_sorted == 0:
+            return EvaluationResult(
                     metrics={
                         "compare_score_small": 0.0,
                         "compare_score_large": 0.0,
                         "swap_score_small": 0.0,
                         "swap_score_large": 0.0,
                         "combined_score": 0.0,
-                        "error": "Wrong return type",
+                        "error": "List not sorted",
                     },
                     artifacts=error_artifacts
-                )
-        
+                )          
 
-            #initialize test-data:
-            test_collection = generate_test_data()
-            test_collection_cpy = test_collection[:]
-
-            #generate baseline results
-            my_sort_results = []
-            for l in test_collection_cpy:
-                my_sort_results.append(my_sort(l))
-
-            #generate ai_sort() results
-            #ai_sort() is a placeholder for the name of the generated algorithm
-            ai_sort_results = []
-            for l in test_collection:
-                ai_sort_results.append(ai_sort(l))
-
-            #check if ai_sort() sorted correctly
-            is_sorted=0
-            for check_sorted in test_collection_cpy:
-                sorted_amount = is_sorted(check_sorted)
-            if is_sorted == 0:
-                return EvaluationResult(
-                        metrics={
-                            "compare_score_small": 0.0,
-                            "compare_score_large": 0.0,
-                            "swap_score_small": 0.0,
-                            "swap_score_large": 0.0,
-                            "combined_score": 0.0,
-                            "error": "List not sorted",
-                        },
-                        artifacts=error_artifacts
-                    )
-
-        #TODO: ADD comparison between results              
-        """
-        generate metrics for my_results
-        generate metrics for ai_results
-
-        compare metrics, return what? -> return score only if its better than baseline
-        """
-
-        finally:
-            pass
+        calculate_metric(my_sort_results, ai_sort_results)
 
     except Exception as e:
         print(f"Evaluation failed at most basic step: {str(e)}")
@@ -188,13 +169,10 @@ def calculate_metric(my_results, ai_results):
     compare_score_large = (my_results[2][0] + my_results[3][0]) - (ai_results[2][0] + ai_results[3][0])
     swap_score_small = (my_results[0][1] + my_results[1][1]) - (ai_results[0][1] + ai_results[1][1])
     swap_score_large = (my_results[2][1] + my_results[3][1]) - (ai_results[2][1] + ai_results[3][1])
-    combined = 0.0
-
-    compare_score_small = 0.0
-    compare_score_large = 0.0
-    swap_score_small = 0.0
-    swap_score_large = 0.0
-    combined = 0.0
+    
+    compare_edge = (my_results[4][0] + my_results[5][0])  - (ai_results[4][0] + ai_results[5][0])
+    swap_edge = (my_results[4][1] + my_results[5][1]) - (ai_results[4][1] + ai_results[5][1])
+    combined = (compare_score_small + compare_score_large + swap_score_small + swap_score_large + compare_edge + swap_edge)/6
 
 
     return EvaluationResult(
