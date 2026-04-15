@@ -3,7 +3,6 @@
 import numpy as np
 
 def sorting_algorithm(rl: list[int]) -> list[int]: 
-    #compares | swaps
     metrics = [0,0]
     for i in range(len(rl)):
         for k in range(len(rl)-1):
