@@ -5,8 +5,16 @@
 #/ 
 ##################################################
 
+
+#run instruction phase 2:
+#python openevolve-run.py examples/circle_packing/openevolve_output/checkpoints/checkpoint_100/best_program.py \
+#  examples/circle_packing/evaluator.py \
+#  --config examples/circle_packing/config_my_ollama_p2.yaml \
+#  --iterations 100
+
 #-------------------------------------------------------------------------------
 
+# Configuration for breaking through the circle packing plateau
 max_iterations: 100
 checkpoint_interval: 10
 log_level: "INFO"
@@ -14,7 +22,7 @@ log_level: "INFO"
 # LLM configuration
 llm:
   provider: "ollama"            
-  primary_model: "qwen2.5-coder:latest"
+  primary_model: "llama3.1:8b"     
   primary_model_weight: 1.0 
   secondary_model: "llama3.1"
   secondary_model_weight: 0.0
@@ -32,10 +40,13 @@ prompt:
     The current algorithm has a runtime of n squared.
     The unsorted input is a list with random values, it is possible that the list contains the same value multiple times.
     The list has to be sorted from smallest to highest value
-    You have to call the function "compare_count()" whenever your algorithm compares two values
-    give the function the name: sorting_algorithm
-  
-  num_top_programs: 2
+    You have to call the function "count_compares()" whenever your algorithm compares two values
+    If you use the comperator ">" use the function "count_swaps()" instead. a > b becomes count_swaps(a,b)
+    give the function for sorting the name: sorting_algorithm
+
+    
+    Focus on breaking through the plateau by trying fundamentally different approaches - don't just tweak parameters.
+  num_top_programs: 4
   use_template_stochasticity: true
 
 # Database configuration
