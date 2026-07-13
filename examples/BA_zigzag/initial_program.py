@@ -1,0 +1,3 @@
+"""
+initiale config für speicher
+"""

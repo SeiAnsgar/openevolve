@@ -1,9 +1,3 @@
-##################################################
-#/
-#/        bisher nur angepasste kopie von circle_packing.
-#/        noch für mein example verändern, vorallem prompt
-#/ 
-##################################################
 
 #-------------------------------------------------------------------------------
 
@@ -12,22 +6,50 @@ checkpoint_interval: 10
 log_level: "INFO"
 
 # LLM configuration
+
+
 llm:
-  provider: "ollama"            
-  primary_model: "qwen2.5-coder:latest"
-  primary_model_weight: 1.0 
-  secondary_model: "llama3.1"
+  api_base: "https://llm.scads.ai/v1"
+  primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model_weight: 1.0
+  secondary_model: "openai/gpt-oss-120b"
   secondary_model_weight: 0.0
-  api_base: "http://localhost:11434/v1"
   temperature: 0.7
-  top_p: 0.95
+  op_p: 0.95
   max_tokens: 4096
-  timeout: 600
+  timeout: 360
+
+#llm:
+  #api_base: "https://generativelanguage.googleapis.com/v1beta/openai/"
+  #primary_model: "gemini-3.1-flash-lite"
+  #primary_model_weight: 1.0
+  #secondary_model: "gemini-3.5-flash" 
+  #secondary_model_weight: 0.0
+  #temperature: 0.7
+  #top_p: 0.95
+  #max_tokens: 4096
+  #timeout: 600
+#llm:
+  #provider: "ollama"            
+  #primary_model: "qwen2.5-coder:latest"
+  #primary_model: "gemini-2.5-flash-lite"
+  #primary_model_weight: 0.8
+  #secondary_model: "gemini-3.1-flash"
+  #secondary_model_weight: 0.2
+  #secondary_model: "llama3.1"
+  #secondary_model_weight: 0.0
+  #api_base: "https://generativelanguage.googleapis.com/v1beta/openai/"
+  #api_base: "http://localhost:11434/v1"
+  #temperature: 0.7
+  #top_p: 0.95
+  #max_tokens: 4096
+  #timeout: 600
 
 
 # Prompt configuration
 prompt:
   system_message: |
+    Your response ALWAYS has to be ONLY the code, no additional comments or explayning.
     You are an expert in computer science specializing in sorting algorithms. Try to improve the runtime of the given sorting algorithm as much as possible.
     The current algorithm has a runtime of n squared.
     The unsorted input is a list with random values, it is possible that the list contains the same value multiple times.
@@ -48,7 +70,7 @@ database:
 
 # Evaluator configuration
 evaluator:
-  timeout: 90  # Extended timeout to allow for more complex optimization
+  timeout: 120  # Extended timeout to allow for more complex optimization
   cascade_evaluation: false #changed: true -> false;a runtime warning suggested the change
   cascade_thresholds: [0.5, 0.8]
   parallel_evaluations: 4

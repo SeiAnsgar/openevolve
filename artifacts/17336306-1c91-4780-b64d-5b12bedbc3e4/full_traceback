@@ -1,0 +1,2987 @@
+Traceback (most recent call last):
+  File "/home/user/Dokumente/uni/open_evolve/openevolve/examples/my_example/evaluator.py", line 110, in evaluate
+    ai_sort_results.append(mod.sorting_algorithm(k)) #->ai_search() ~> mod.sorting_algorithm()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 47, in sorting_algorithm
+    return sorting_algorithm_wrapper(rl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmp_k5otarb.py", line 41, in sorting_algorithm_wrapper
+    sorted_list = sorting_algorithm(rl)
+                  ^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded

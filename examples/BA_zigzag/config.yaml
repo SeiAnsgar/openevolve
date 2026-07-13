@@ -1,0 +1,71 @@
+#-------------------------------------------------------------------------------
+max_iterations: 100
+checkpoint_interval: 10
+log_level: "INFO"
+
+
+# LLM configuration
+#von claude vorgeschlagen
+llm:
+  api_base: "https://llm.scads.ai/v1"
+  primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model_weight: 1.0
+  secondary_model: "openai/gpt-oss-120b"
+  secondary_model_weight: 0.0
+  temperature: 0.7
+  op_p: 0.95
+  max_tokens: 4096
+  timeout: 360
+
+#backup
+#llm:
+  #provider: "ollama"            
+  #primary_model: "qwen2.5-coder:latest"
+  #primary_model_weight: 1.0 
+  #secondary_model: "llama3.1"
+  #secondary_model_weight: 0.0
+  #api_base: "http://localhost:11434/v1"
+  #temperature: 0.7
+  #top_p: 0.95
+  #max_tokens: 4096
+  #timeout: 600
+
+
+# Prompt configuration
+prompt:
+  system_message: |
+
+  You are an expert in computer science specializing in Hardware Design. You are given a spatial- and temporal loop mapping. The mapping syntax is definined by the ZigZag Framework. 
+  Try to improve the mapping <in sachen anzahl zugriffe>
+
+
+    You are an expert in computer science specializing in sorting algorithms. Try to improve the runtime of the given sorting algorithm as much as possible.
+    The current algorithm has a runtime of n squared.
+    The unsorted input is a list with random values, it is possible that the list contains the same value multiple times.
+    The list has to be sorted from smallest to highest value
+    You have to call the function "compare_count()" whenever your algorithm compares two values
+    give the function the name: sorting_algorithm
+  
+  num_top_programs: 2
+  use_template_stochasticity: true
+
+# Database configuration
+database:
+  population_size: 70  # Larger population for more diversity
+  archive_size: 30
+  num_islands: 5
+  elite_selection_ratio: 0.3
+  exploitation_ratio: 0.6  # Slightly lower to encourage exploration
+
+# Evaluator configuration
+evaluator:
+  timeout: 90  # Extended timeout to allow for more complex optimization
+  cascade_evaluation: false #changed: true -> false;a runtime warning suggested the change
+  cascade_thresholds: [0.5, 0.8]
+  parallel_evaluations: 4
+  use_llm_feedback: false
+
+# Evolution settings
+diff_based_evolution: false
+allow_full_rewrites: true  # Definitely allow full rewrites
+max_code_length: 1000
