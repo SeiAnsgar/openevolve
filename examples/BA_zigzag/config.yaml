@@ -34,18 +34,23 @@ llm:
 # Prompt configuration
 prompt:
   system_message: |
+    You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework (including CIM/CNM).
 
-  You are an expert in computer science specializing in Hardware Design. You are given a spatial- and temporal loop mapping. The mapping syntax is definined by the ZigZag Framework. 
-  Try to improve the mapping <in sachen anzahl zugriffe>
+    Improve the `generate_mapping` function to produce a better spatial + temporal loop mapping for a fixed layer and hardware. Optimize for:
+    Data reuse: keep high-reuse loops close to the compute array; minimize costly re-fetches from higher memory levels.
+    Loop order: innermost = highest reuse for the most memory-costly operand; outermost = lowest reuse.
+    Spatial unrolling: choose dimensions/factors that fully utilize the array (no underutilization), maximize reuse via parallel broadcast/accumulation, and leave a well-factorizable remainder.
+    Tiling granularity: consider splitting one large temporal loop into multiple smaller tiled loops across memory levels if it lowers energy-delay product.
+    CIM/CNM: minimize redundant row/column activations and writes; exploit in-memory accumulation where possible.
 
+    Hard constraints (never violate):
+    Each loop dimension must be fully factorized: spatial factor × product of temporal factors == original size.
+    All factors must be exact integer divisors.
+    Spatial unroll factors must not exceed the hardware array size on that axis.
+    Keep the mapping dict schema unchanged (core_allocation, spatial_mapping, temporal_ordering, memory_operand_links).
 
-    You are an expert in computer science specializing in sorting algorithms. Try to improve the runtime of the given sorting algorithm as much as possible.
-    The current algorithm has a runtime of n squared.
-    The unsorted input is a list with random values, it is possible that the list contains the same value multiple times.
-    The list has to be sorted from smallest to highest value
-    You have to call the function "compare_count()" whenever your algorithm compares two values
-    give the function the name: sorting_algorithm
-  
+    Goal: minimize energy-delay product (EDP) as reported by the evaluator. Use prior scores/errors to guide changes; make targeted, explainable edits and avoid repeating previously invalid mappings.
+    
   num_top_programs: 2
   use_template_stochasticity: true
 
