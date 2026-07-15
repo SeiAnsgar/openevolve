@@ -5,6 +5,11 @@
 
 
 from zigzag import api  
+import importlib.util
+import traceback
+import yaml
+from openevolve.evaluation_result import EvaluationResult
+from zigzag.api import get_hardware_performance_zigzag
 
 workload = "/zigzag_inputs/models/ my_workload"
 accelerator = "/zigzag_inputs/hardware/ my_accelerator"
@@ -19,8 +24,67 @@ energy, latency, cme = api.get_hardware_performance_zigzag(
     pickle_filename="outputs/list_of_cmes.pickle"
 )
 
-#eval part für:
-#syntax correct? hat 
+
+WORKLOAD_PATH = "inputs/workload/my_model.onnx"
+ACCELERATOR_PATH = "inputs/hardware/my_accelerator.yaml"
+
+def set_metric(valid: float, energy: float, latency: float, error_msg: str) -> EvaluationResult:
+    return EvaluationResult(
+        metrics={
+            "valid": valid,
+            "energy": energy,
+            "latency": latency,
+            "combined_score": 1.0 / latency,
+        },
+        artifacts=error_msg
+    )
+    
+    
+
+
+def evaluate(program_path: str) -> EvaluationResult:
+
+    try:
+        spec = importlib.util.spec_from_file_location("program", program_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        func = getattr(mod, "mapping_generator")
+
+        #DEBUG print generated mapping to std out
+        with open(program_path, "r", encoding="u    tf-8") as f:
+            generated_code = f.read()
+            print("###########################")
+            print("GENERATED CODE")
+            print(generated_code)
+            print(" ")
+            print("###########################")
+    
+    if not callable(func):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #-----------------------------von claude erzeugt, testen------------------------------------
@@ -35,12 +99,12 @@ WORKLOAD_PATH = "inputs/workload/my_model.onnx"
 ACCELERATOR_PATH = "inputs/hardware/my_accelerator.yaml"
 
 
-def _load_mapping_path(program_path: str) -> str:
+def evaluate(program_path: str) -> str:
     # laedt das evolvierte Programm dynamisch und ruft dessen generate_mapping() auf
     spec = importlib.util.spec_from_file_location("evolved_program", program_path)
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # kann SyntaxError/ImportError/Exception werfen
-    return module.generate_mapping()  # muss Pfad zur geschriebenen .yaml zurueckgeben
+    spec.loader.exec_module(module)
+    return module.generate_mapping()  
 
 
 
@@ -51,7 +115,7 @@ def _fail(error_type: str, msg: str) -> EvaluationResult:
     )
 
 
-def evaluate(mapping_path: str) -> EvaluationResult:
+def catch_errors(mapping_path: str) -> EvaluationResult:
     try:
         energy, latency, cmes = get_hardware_performance_zigzag(
             workload=WORKLOAD_PATH,
