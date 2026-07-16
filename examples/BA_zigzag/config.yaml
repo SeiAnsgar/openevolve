@@ -32,25 +32,37 @@ llm:
 
 
 # Prompt configuration
+#ideas what to include in promt:
+#-model name
+#hardware definition (could cause problems because hardware definition is long which could lead to too long promt.. test later)
+
 prompt:
   system_message: |
     You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework (including CIM/CNM).
+    The given hardware is asmic.yaml provided by ZigZag.
+    The given workload is the AlexNet model.
 
     Improve the `generate_mapping` function to produce a better spatial + temporal loop mapping for a fixed layer and hardware. Optimize for:
-    Data reuse: keep high-reuse loops close to the compute array; minimize costly re-fetches from higher memory levels.
-    Loop order: innermost = highest reuse for the most memory-costly operand; outermost = lowest reuse.
-    Spatial unrolling: choose dimensions/factors that fully utilize the array (no underutilization), maximize reuse via parallel broadcast/accumulation, and leave a well-factorizable remainder.
-    Tiling granularity: consider splitting one large temporal loop into multiple smaller tiled loops across memory levels if it lowers energy-delay product.
-    CIM/CNM: minimize redundant row/column activations and writes; exploit in-memory accumulation where possible.
+    - Data reuse: keep high-reuse loops close to the compute array; minimize costly re-fetches from higher memory levels.
+    - Loop order: innermost = highest reuse for the most memory-costly operand; outermost = lowest reuse.
+    - Spatial unrolling: choose dimensions/factors that fully utilize the array (no underutilization), maximize reuse via parallel broadcast/accumulation, and leave a well-factorizable remainder.
+    - Tiling granularity: consider splitting one large temporal loop into multiple smaller tiled loops across memory levels if it lowers energy-delay product.
+    - CIM/CNM: minimize redundant row/column activations and writes; exploit in-memory accumulation where possible.
 
     Hard constraints (never violate):
-    Each loop dimension must be fully factorized: spatial factor × product of temporal factors == original size.
-    All factors must be exact integer divisors.
-    Spatial unroll factors must not exceed the hardware array size on that axis.
-    Keep the mapping dict schema unchanged (core_allocation, spatial_mapping, temporal_ordering, memory_operand_links).
+    - Each loop dimension must be fully factorized: spatial factor x product of temporal factors == original size.
+    - All factors must be exact integer divisors.
+    - Spatial unroll factors must not exceed the hardware array size on that axis.
+    - Keep the mapping dict schema unchanged (core_allocation, spatial_mapping, temporal_ordering, memory_operand_links).
 
-    Goal: minimize energy-delay product (EDP) as reported by the evaluator. Use prior scores/errors to guide changes; make targeted, explainable edits and avoid repeating previously invalid mappings.
-    
+    Goal: minimize energy-delay product (EDP) as reported by the evaluator. Use prior scores/errors to guide changes; make targeted changes and avoid repeating previously invalid mappings.
+
+    Output format (strict):
+    - Return ONLY the modified `generate_mapping` function as raw Python code.
+    - Do NOT include comments, docstrings, print statements, or explanations anywhere in the code.
+    - Do NOT add extra variables, alternative mappings, helper functions, or unused code.
+    - The function must contain only the minimal code required to define and return the mapping.
+    - Match the length and structure of the original example as closely as possible.
   num_top_programs: 2
   use_template_stochasticity: true
 
@@ -73,4 +85,4 @@ evaluator:
 # Evolution settings
 diff_based_evolution: false
 allow_full_rewrites: true  # Definitely allow full rewrites
-max_code_length: 1000
+max_code_length: 2000
