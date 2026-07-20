@@ -4,12 +4,8 @@
 """
 
 """
-run script with:
-python openevolve-run.py examples/BA_zigzag/initial_program.py \
-  examples/BA_zigzag/evaluator.py \
-  --config examples/BA_zigzag/config.yaml \
-  --iterations 10
-
+run script with (on laptop):
+python openevolve-run.py BA_zigzag/initial_program.py BA_zigzag/evaluator.py --config BA_zigzag/config.yaml --iterations 10
 """
 import matplotlib
 matplotlib.use("Agg")
@@ -26,8 +22,8 @@ from zigzag.parser.mapping_validator import MappingValidator
 
 #TODO: set correct paths
 
-WORKLOAD_PATH = "examples/BA_zigzag/zigzag_inputs/models/resnet18_first_layer.onnx"
-ACCELERATOR_PATH = "examples/BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
+WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet18_first_layer.onnx"
+ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
 
 
 def calculate_combined_score(valid, energy, latency) -> float:

@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def handling(some_mapping):
-    ordner = Path("examples/BA_zigzag/zigzag_inputs/mappings/working_dir")
+    ordner = Path("BA_zigzag/zigzag_inputs/mappings/working_dir")
     ordner.mkdir(exist_ok=True)
 
     version = 1

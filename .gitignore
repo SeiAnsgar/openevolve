@@ -1,10 +1,10 @@
 #My feature/BA branch
 results/
-examples/lm_eval/prompts/system_message.txt
-examples/lm_eval/prompts/evaluator_system_message.txt
-examples/BA_zigzag/zigzag_inputs/models
-examples/BA_zigzag/zigzag_inputs/mappings
-examples/BA_zigzag/claude_playground.py
+lm_eval/prompts/system_message.txt
+lm_eval/prompts/evaluator_system_message.txt
+BA_zigzag/zigzag_inputs/models
+BA_zigzag/zigzag_inputs/mappings
+BA_zigzag/claude_playground.py
 outputs/
 
 
