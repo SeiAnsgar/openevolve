@@ -3,6 +3,17 @@
 -nach welcher metrik optimieren ? 
 """
 
+"""
+run script with:
+python openevolve-run.py examples/BA_zigzag/initial_program.py \
+  examples/BA_zigzag/evaluator.py \
+  --config examples/BA_zigzag/config.yaml \
+  --iterations 10
+
+"""
+import matplotlib
+matplotlib.use("Agg")
+
 from zigzag import api  
 import importlib.util
 import traceback
@@ -15,12 +26,12 @@ from zigzag.parser.mapping_validator import MappingValidator
 
 #TODO: set correct paths
 
-WORKLOAD_PATH = "examples/BA_zigzag/zigzag_inputs/models/alexnet.onnx"
+WORKLOAD_PATH = "examples/BA_zigzag/zigzag_inputs/models/resnet18_first_layer.onnx"
 ACCELERATOR_PATH = "examples/BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
 
 
 def calculate_combined_score(valid, energy, latency) -> float:
-    result = valid * energy + latency * 1.5
+    result = valid * (energy + latency * 1.5)
     return result
 
 
@@ -67,7 +78,7 @@ def evaluate(program_path: str) -> EvaluationResult:
         """
         
         if not callable(func):
-            #lazy error check TODO: if needed implement proper error handling 
+            #TODO: if needed implement proper error handling 
             print("DEBUG: not callable Error!")
         
         if not is_valid_mapping(mapping_path):
@@ -81,9 +92,9 @@ def evaluate(program_path: str) -> EvaluationResult:
         
         #TODO: check mapping for semantic
         
-        print("#########DEBUG##########")
-        print("mapping_path:")
-        print(mapping_path)
+        #print("#########DEBUG##########")
+        #print("mapping_path:")
+        #print(mapping_path)
         energy, latency, cme = api.get_hardware_performance_zigzag(
             WORKLOAD_PATH,
             ACCELERATOR_PATH,

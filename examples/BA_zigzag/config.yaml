@@ -39,8 +39,8 @@ llm:
 prompt:
   system_message: |
     You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework (including CIM/CNM).
-    The given hardware is asmic.yaml provided by ZigZag.
-    The given workload is the AlexNet model.
+    The given hardware is amic.yaml provided by ZigZag, can be found in zigzag repo tutorial1 folder.
+    The given workload is the resnet18_frist_layer.onnx model.
 
     Improve the `generate_mapping` function to produce a better spatial + temporal loop mapping for a fixed layer and hardware. Optimize for:
     - Data reuse: keep high-reuse loops close to the compute array; minimize costly re-fetches from higher memory levels.
@@ -76,7 +76,7 @@ database:
 
 # Evaluator configuration
 evaluator:
-  timeout: 90  # Extended timeout to allow for more complex optimization
+  timeout: 180  # Extended timeout to allow for more complex optimization
   cascade_evaluation: false #changed: true -> false;a runtime warning suggested the change
   cascade_thresholds: [0.5, 0.8]
   parallel_evaluations: 4

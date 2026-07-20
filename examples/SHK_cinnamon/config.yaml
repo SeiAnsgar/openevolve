@@ -1,0 +1,46 @@
+max_iterations: 100
+checkpoint_interval: 10
+log_level: "INFO"
+
+# LLM configuration
+
+
+llm:
+  api_base: "https://llm.scads.ai/v1"
+  primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model_weight: 1.0
+  secondary_model: "openai/gpt-oss-120b"
+  secondary_model_weight: 0.0
+  temperature: 0.7
+  op_p: 0.95
+  max_tokens: 4096
+  timeout: 360
+
+# Prompt configuration
+prompt:
+  system_message: |
+    some promt for cinnamon
+  
+  num_top_programs: 2
+  use_template_stochasticity: true
+
+# Database configuration
+database:
+  population_size: 70  # Larger population for more diversity
+  archive_size: 30
+  num_islands: 5
+  elite_selection_ratio: 0.3
+  exploitation_ratio: 0.6  # Slightly lower to encourage exploration
+
+# Evaluator configuration
+evaluator:
+  timeout: 120  # Extended timeout to allow for more complex optimization
+  cascade_evaluation: false #changed: true -> false;a runtime warning suggested the change
+  cascade_thresholds: [0.5, 0.8]
+  parallel_evaluations: 4
+  use_llm_feedback: false
+
+# Evolution settings
+diff_based_evolution: false
+allow_full_rewrites: true  # Definitely allow full rewrites
+max_code_length: 1000
