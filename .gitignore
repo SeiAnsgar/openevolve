@@ -5,6 +5,9 @@ examples/lm_eval/prompts/evaluator_system_message.txt
 examples/BA_zigzag/zigzag_inputs/models
 examples/BA_zigzag/zigzag_inputs/mappings
 examples/BA_zigzag/claude_playground.py
+outputs/
+
+
 
 # Python
 __pycache__/

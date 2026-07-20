@@ -77,7 +77,7 @@ def evaluate(program_path: str) -> EvaluationResult:
             "full_traceback": traceback.format_exc(),
             "suggestion": "Ensure that mapping is valid yaml format AND correct zigzag mapping syntax."
             }
-            return EvaluationResult(set_metric(0.0, 0.0, 0.0, error_artifacts))
+            return set_metric(0.0, 0.0, 0.0, error_artifacts)
         
         #TODO: check mapping for semantic
         
@@ -96,7 +96,7 @@ def evaluate(program_path: str) -> EvaluationResult:
         print("################ DEBUG ##############")
         print("ZIGZAG EVALUATOR CALLED!")
         error_artifacts = {}
-        return EvaluationResult(set_metric(1.0, energy, latency, error_artifacts))
+        return set_metric(1.0, energy, latency, error_artifacts)
 
 
     except Exception as e:
@@ -109,4 +109,4 @@ def evaluate(program_path: str) -> EvaluationResult:
             "full_traceback": traceback.format_exc(),
             "suggestion": "Check for syntax errors in generated code."
         }
-        return EvaluationResult(set_metric(0.0, 0.0, 0.0, error_artifacts))
+        return set_metric(0.0, 0.0, 0.0, error_artifacts)
