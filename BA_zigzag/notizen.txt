@@ -1,0 +1,19 @@
+aktueller workflow:
+ich habe gegeben:
+-hardwareconfig.yaml
+-workload (modell.onnx)
+-inital_programm() enthält baseline loopmapping (handkopiert)
+-evaluator versucht dieses mapping zu verbessern
+
+bisherige probleme und deren lösung:
+-problem: openevolve ist gut zum code evolven, nicht nur daten
+->inital_programm() ist eine art wrapper
+
+-problem: initial_program enthält i.d.R. eine schlechte baseline (genereller start führt zu vielen
+ungültigen mappings)
+->TODO: zigzag gültiges mapping für hardware und workload generieren lassen, das als baseline zum 
+evolven nehmen
+
+
+
+python main.py --model zigzag/inputs/workload/alexnet.onnx --accelerator zigzag/inputs/hardware/aimc.yaml --mapping /home/ansi/Documents/openevolve/BA_zigzag/zigzag_inputs/baseline_mappings/baseline.yaml

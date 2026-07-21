@@ -4,9 +4,11 @@
 """
 
 """
-run script with (on laptop):
+run script with:
 python openevolve-run.py BA_zigzag/initial_program.py BA_zigzag/evaluator.py --config BA_zigzag/config.yaml --iterations 10
 """
+
+#this is to prevent error messaages (caused by plotting during headless exec)
 import matplotlib
 matplotlib.use("Agg")
 
@@ -22,8 +24,10 @@ from zigzag.parser.mapping_validator import MappingValidator
 
 #TODO: set correct paths
 
-WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet18_first_layer.onnx"
+WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet18.onnx"
 ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
+DUMP_FOLDER_PATH = "BA_zigzag/zigzag_output"
+PICKLE_PATH = "BA_zigzag/zigzag_output"
 
 
 def calculate_combined_score(valid, energy, latency) -> float:
@@ -61,17 +65,6 @@ def evaluate(program_path: str) -> EvaluationResult:
         spec.loader.exec_module(mod)
         func = getattr(mod, "generate_mapping")
         mapping_path = func()   #access the generated mapping with this path
-
-        #DEBUG print generated mapping to std out
-        """
-        with open(program_path, "r", encoding="utf-8") as f:
-            generated_code = f.read()
-            print("###########################")
-            print("GENERATED CODE")
-            print(generated_code)
-            print("###########################")
-    
-        """
         
         if not callable(func):
             #TODO: if needed implement proper error handling 
@@ -95,10 +88,9 @@ def evaluate(program_path: str) -> EvaluationResult:
             WORKLOAD_PATH,
             ACCELERATOR_PATH,
             mapping_path,
-            opt="latency"
-            #TODO set correct paths if needed; if not neede remove parameters
-            #dump_folder="outputs/{datetime}.json",
-            #pickle_filename="outputs/list_of_cmes.pickle"
+            opt="latency",
+            dump_folder="BA_zigzag/zigzag_output/{datetime}.json",
+            pickle_filename="BA_zigzag/zigzag_output/list_of_cmes.pickle"
         )
         print("################ DEBUG ##############")
         print("ZIGZAG EVALUATOR CALLED!")

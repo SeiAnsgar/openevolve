@@ -5,7 +5,7 @@ lm_eval/prompts/evaluator_system_message.txt
 BA_zigzag/zigzag_inputs/models
 BA_zigzag/zigzag_inputs/mappings
 BA_zigzag/claude_playground.py
-outputs/
+BA_zigzag/zigzag_output
 
 
 

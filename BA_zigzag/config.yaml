@@ -62,7 +62,6 @@ prompt:
     - Do NOT include comments, docstrings, print statements, or explanations anywhere in the code.
     - Do NOT add extra variables, alternative mappings, helper functions, or unused code.
     - The function must contain only the minimal code required to define and return the mapping.
-    - Match the length and structure of the original example as closely as possible.
   num_top_programs: 2
   use_template_stochasticity: true
 
