@@ -13,6 +13,7 @@ bisherige probleme und deren lösung:
 ungültigen mappings)
 ->TODO: zigzag gültiges mapping für hardware und workload generieren lassen, das als baseline zum 
 evolven nehmen
+-->infos aus json extrahieren | daraus python dict bauen | nur code des dicts ausgeben | code in initial program schreiben
 
 
 

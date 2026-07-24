@@ -8,14 +8,15 @@ log_level: "INFO"
 #von claude vorgeschlagen
 llm:
   api_base: "https://llm.scads.ai/v1"
-  primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model: "zai-org/GLM-5.2-FP8"
+  #primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
   primary_model_weight: 1.0
   secondary_model: "openai/gpt-oss-120b"
   secondary_model_weight: 0.0
-  temperature: 0.7
+  temperature: 0.6
   op_p: 0.95
   max_tokens: 4096
-  timeout: 360
+  timeout: 180
 
 #backup
 #llm:
@@ -48,20 +49,27 @@ prompt:
     - Spatial unrolling: choose dimensions/factors that fully utilize the array (no underutilization), maximize reuse via parallel broadcast/accumulation, and leave a well-factorizable remainder.
     - Tiling granularity: consider splitting one large temporal loop into multiple smaller tiled loops across memory levels if it lowers energy-delay product.
     - CIM/CNM: minimize redundant row/column activations and writes; exploit in-memory accumulation where possible.
+    - Goal: minimize energy-delay product (EDP) as reported by the evaluator. Use prior scores/errors to guide changes; make targeted changes and avoid repeating previously invalid mappings.
+    IMPORTANT: do NOT implement a temporal_ordering part and temporal_mapping part
 
-    Hard constraints (never violate):
-    - Each loop dimension must be fully factorized: spatial factor x product of temporal factors == original size.
-    - All factors must be exact integer divisors.
-    - Spatial unroll factors must not exceed the hardware array size on that axis.
-    - Keep the mapping dict schema unchanged (core_allocation, spatial_mapping, temporal_ordering, memory_operand_links).
+#    Syntax hints for temporal ordering section:
+#    - it has to be list type
+#    - entries have to be [name, number] pairs
 
-    Goal: minimize energy-delay product (EDP) as reported by the evaluator. Use prior scores/errors to guide changes; make targeted changes and avoid repeating previously invalid mappings.
+ #   Hard constraints (never violate):
+ #   - Each loop dimension must be fully factorized: spatial factor x product of temporal factors == original size.
+ #   - All factors must be exact integer divisors.
+ #   - Spatial unroll factors must not exceed the hardware array size on that axis.
+ #   - Keep the mapping dict schema unchanged (core_allocation, spatial_mapping, temporal_ordering, memory_operand_links).
 
-    Output format (strict):
-    - Return ONLY the modified `generate_mapping` function as raw Python code.
-    - Do NOT include comments, docstrings, print statements, or explanations anywhere in the code.
-    - Do NOT add extra variables, alternative mappings, helper functions, or unused code.
-    - The function must contain only the minimal code required to define and return the mapping.
+    
+
+#    Output format (strict):
+#    - Return ONLY the modified `generate_mapping` function as raw Python code.
+#    - Do NOT include comments, docstrings, print statements, or explanations anywhere in the code.
+#    - Do NOT add extra variables, alternative mappings, helper functions, or unused code.
+#    - The function must contain only the minimal code required to define and return the mapping.
+
   num_top_programs: 2
   use_template_stochasticity: true
 

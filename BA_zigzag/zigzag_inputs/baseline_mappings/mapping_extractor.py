@@ -1,129 +1,114 @@
 
-import pickle
-
-with open("/home/ansi/Documents/zzig/zigzag/outputs/2026-07-21 00:26:15.284500/cmes.pickle", "rb") as fp:
-    cmes = pickle.load(fp)
-
-cme = cmes[0]
-#print(cmes)
-print(cme.spatial_mapping)
-print(cme.temporal_mapping)
-print("################")
-print(cme.spatial_mapping_int)
-
-
-
-
-
-
-
-"""
-SpatialMapping
-(
-    {
-        O: [[], [(K, 32.0), (C, 3.0)], [], []], 
-        W: [[], [(K, 32.0), (C, 3.0)], []], 
-        I: [[(K, 32.0), (C, 3.0)], [], []]
-    }
-)
-{   
-    O: [[(FX, 7), (FY, 7)], [(OY, 16), (OY, 7), (OX, 112), (K, 2)], []], 
-    W: [[(FX, 7), (FY, 7), (OY, 16), (OY, 7), (OX, 112), (K, 2)], []], 
-    I: [[(FX, 7), (FY, 7), (OY, 16), (OY, 7), (OX, 112), (K, 2)], []]
-}
-
-"""
-
-
-
-
-
-
-
-
-
-
-
-
-#claude (slop?)
-"""
-import pickle
+import json
+import re
 import yaml
+from pprint import pformat
 
-pickle_path = "/home/ansi/Documents/zzig/zigzag/outputs/2026-07-21 00:26:15.284500/cmes.pickle"
+JSON_PATH = "/home/ansi/Documents/zzig/zigzag/outputs/2026-07-21 00:26:15.284500/_conv1_Conv_complete.json"
 
-with open(pickle_path, "rb") as fp:
-    cmes = pickle.load(fp)
+with open(JSON_PATH) as f:
+    data = json.load(f)
 
-cme = cmes[0]
+raw_spatial_mapping = data["inputs"]["layer"]["user_spatial_mapping"]
+raw_memory_operand_links = data["inputs"]["layer"]["memory_operand_links"]
+raw_temporal_ordering = data["inputs"]["temporal_mapping"]
 
+############### SPATIAL MAPPING HANDLER ##################
 
-def to_clean_number(size):
-    size = float(size)
-    return int(size) if size.is_integer() else size
+spatial_mapping = {}
+for dim, inner_dict in raw_spatial_mapping.items():
+    # inner_dict hat genau einen Eintrag, z.B. {"K": 32}
+    name, factor = next(iter(inner_dict.items()))
+    spatial_mapping[dim] = [f"{name}, {factor}"]
 
-
-def flatten_operand_mapping(mapping_dict):
-    
-    flat = {}
-    for operand, levels in mapping_dict.items():
-        combined = []
-        for level in levels:
-            for dim, size in level:
-                combined.append((str(dim), to_clean_number(size)))
-        flat[str(operand)] = combined
-    return flat
+print(spatial_mapping)
 
 
-def consistent_flat_order(flat_per_operand, label):
-    sequences = list(flat_per_operand.values())
-    reference = sequences[0]
-    for operand, seq in flat_per_operand.items():
-        if seq != reference:
-            print(f"WARNUNG ({label}): Operand '{operand}' weicht ab!")
-            print(f"  Referenz: {reference}")
-            print(f"  {operand}: {seq}")
-    return reference
+################ TEMPORAL MAPPING HANDLER ################
+def parse_entry(entry_str):
+    # "(FX, 7)" -> ("FX", 7)
+    match = re.match(r"\(\s*(\w+)\s*,\s*(\d+)\s*\)", entry_str)
+    dim, factor = match.groups()
+    return (dim, int(factor))
+
+seen = set()
+temporal_result = []
+
+for operand in ("O", "W", "I"):
+    for level in raw_temporal_ordering[operand]:
+        for entry_str in level:
+            entry = parse_entry(entry_str)
+            if entry not in seen:
+                seen.add(entry)
+                temporal_result.append(list(entry))
 
 
-# --- Spatial Mapping: bereits flach, direkt verwenden ---
-spatial_order = [
-    (str(dim), to_clean_number(size))
-    for dim, size in cme.spatial_mapping.spatial_loop_dim_size
-]
-
-# --- Temporal Mapping: pro Operand+Level flatten ---
-temporal_flat = flatten_operand_mapping(cme.temporal_mapping.mapping_dic_origin)
-temporal_order = consistent_flat_order(temporal_flat, "temporal_mapping")
 
 
-# ACHTUNG: Prüfen, ob deine Hardware mehrere Array-Dimensionen (D1, D2, ...) hat.
-# Falls ja und K/C sollen auf getrennte Dimensionen, hier ggf. manuell aufteilen.
-spatial_mapping_yaml = {
-    "D1": [[dim, size] for dim, size in spatial_order]
-}
 
-temporal_ordering_yaml = [[dim, size] for dim, size in temporal_order]
+mapping = {}
+mapping["name"] = "default" 
+mapping["spatial_mapping"] = spatial_mapping
 
-mapping_yaml_structure = [
-    {
-        "name": "default",
-        "core_allocation": 1,
-        "spatial_mapping": spatial_mapping_yaml,
-        "temporal_ordering": temporal_ordering_yaml,
-        "memory_operand_links": {
-            "O": "O",
-            "W": "I2",
-            "I": "I1",
-        },
-    }
-]
+mapping["memory_operand_links"] = raw_memory_operand_links
+mapping_to_list = [mapping]
+#mapping["temporal_ordering"] = temporal_result
+print(mapping_to_list)
 
-print("--- YAML-Vorschau ---")
-print(yaml.dump(mapping_yaml_structure, sort_keys=False))
+#################### SAVE TO YAML FILE (for debugging) ############################
+with open("BA_zigzag/zigzag_inputs/baseline_mappings/extractor_dump.yaml", "w") as f:
+    yaml.dump(mapping_to_list, f, sort_keys=False)
 
-print("\n--- Zum Copy-Pasten in initial_program.py ---\n")
-print("def get_mapping():")
-print(f"    return {mapping_yaml_structure!r}")
+"""
+print("spatial mapping:")
+print(spatial_mapping)
+print("########################")
+print("memory operand links:")
+print(memory_operand_links)
+print("########################")
+"""
+print("temporal mapping")
+print(temporal_result)
+
+############# PRINT STAGE ######################
+code_str = "mapping = " + pformat(mapping_to_list, indent=4, sort_dicts=False)
+print(code_str)
+
+
+
+
+"""
+############################
+json druchsuchen (in _conv1_Conv_complete.json schauen): 
+
+"inputs"
+    "layer"
+        "user_spatial_mapping" -> spatial_mapping
+        ...
+        "memory_operand_links" -> memory_operand_links
+        ...
+    "temporal_mapping"
+        ...
+        //aufdröseln und einträge rausholen
+
+#############################
+
+#beispiel mapping in richtigem format:
+- name: example_name_of_layer0
+  spatial_mapping:
+    D1:
+    - C, 32
+    D2:
+    - K, 32
+temporal_ordering:
+    - [OX, 112] # Innermost loop
+    - [OY, 112]
+    - [FX, 7]
+    - [FY, 7]
+    - [K, 2] # Outermost loop
+memory_operand_links:
+    O: O
+    W: I2
+    I: I1
 
 """

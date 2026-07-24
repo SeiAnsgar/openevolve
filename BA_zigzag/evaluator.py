@@ -51,9 +51,9 @@ def is_valid_mapping(path: str) -> bool:
     try:
         data = open_yaml(path)
     except yaml.YAMLError:
-        print("mapping is not valid")
+        print("mapping is not NOT in yaml format")
         return False
-    print("mapping is valid")
+    print("mapping is in yaml format")
     return MappingValidator(data).validate()
 
 
