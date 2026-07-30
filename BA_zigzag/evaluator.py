@@ -1,8 +1,3 @@
-#TODO
-"""
--nach welcher metrik optimieren ? 
-"""
-
 """
 run script with:
 python openevolve-run.py BA_zigzag/initial_program.py BA_zigzag/evaluator.py --config BA_zigzag/config.yaml --iterations 10
@@ -24,14 +19,19 @@ from zigzag.parser.mapping_validator import MappingValidator
 
 #TODO: set correct paths
 
-WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet18.onnx"
+WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet50_infer.onnx"
 ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
 DUMP_FOLDER_PATH = "BA_zigzag/zigzag_output"
 PICKLE_PATH = "BA_zigzag/zigzag_output"
 
 
+BASELINE_ENERGY = 18719445507
+BASELINE_LATENCY = 64714023.0000
+
 def calculate_combined_score(valid, energy, latency) -> float:
-    result = valid * (energy + latency * 1.5)
+    energy_score = (BASELINE_ENERGY / (energy + 1e-6))/100
+    latency_score = BASELINE_LATENCY / (latency + 1e-6)
+    result = valid * 0.5 * (energy_score + latency_score)
     return result
 
 

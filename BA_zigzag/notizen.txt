@@ -11,10 +11,18 @@ bisherige probleme und deren lösung:
 
 -problem: initial_program enthält i.d.R. eine schlechte baseline (genereller start führt zu vielen
 ungültigen mappings)
-->TODO: zigzag gültiges mapping für hardware und workload generieren lassen, das als baseline zum 
+-> zigzag gültiges mapping für hardware und workload generieren lassen, das als baseline zum 
 evolven nehmen
 -->infos aus json extrahieren | daraus python dict bauen | nur code des dicts ausgeben | code in initial program schreiben
 
+-problem: openevos ergebnis war nicht besonders gut
+->verbesserungen angewendet: a)provided hardware config in promt, b) fine-tune metric calculation, c) add modell description to promt"
+
+-problem: main.py in zigzag ist hardcoded auf bestimmte inputs
+-> parser hinzufügen
+
+-problem: zigzag nimmt nur inferred .onnx modelle
+->programm geschrieben was die modelle inferred 
 
 
 python main.py --model zigzag/inputs/workload/alexnet.onnx --accelerator zigzag/inputs/hardware/aimc.yaml --mapping /home/ansi/Documents/openevolve/BA_zigzag/zigzag_inputs/baseline_mappings/baseline.yaml

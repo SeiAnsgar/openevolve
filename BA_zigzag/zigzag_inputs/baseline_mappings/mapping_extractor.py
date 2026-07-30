@@ -43,9 +43,6 @@ for operand in ("O", "W", "I"):
                 temporal_result.append(list(entry))
 
 
-
-
-
 mapping = {}
 mapping["name"] = "default" 
 mapping["spatial_mapping"] = spatial_mapping
@@ -59,14 +56,6 @@ print(mapping_to_list)
 with open("BA_zigzag/zigzag_inputs/baseline_mappings/extractor_dump.yaml", "w") as f:
     yaml.dump(mapping_to_list, f, sort_keys=False)
 
-"""
-print("spatial mapping:")
-print(spatial_mapping)
-print("########################")
-print("memory operand links:")
-print(memory_operand_links)
-print("########################")
-"""
 print("temporal mapping")
 print(temporal_result)
 
@@ -76,23 +65,7 @@ print(code_str)
 
 
 
-
 """
-############################
-json druchsuchen (in _conv1_Conv_complete.json schauen): 
-
-"inputs"
-    "layer"
-        "user_spatial_mapping" -> spatial_mapping
-        ...
-        "memory_operand_links" -> memory_operand_links
-        ...
-    "temporal_mapping"
-        ...
-        //aufdröseln und einträge rausholen
-
-#############################
-
 #beispiel mapping in richtigem format:
 - name: example_name_of_layer0
   spatial_mapping:

@@ -1,0 +1,84 @@
+#dauer gemessen mit python time
+#"a)provided hardware config in promt, b) fine-tune metric calculation, c) add modell description to promt"
+
+#run zigzag with: time python main.py --model zigzag/inputs/workload/resnet18.onnx --accelerator zigzag/inputs/hardware/aimc.yaml --mapping /home/ansi/Documents/openevolve/BA_zigzag/zigzag_inputs/baseline_mappings/baseline.yaml
+ 
+test_1:
+  inputs: [workload: "resnet18.onnx", hardware: "amic.yaml"]
+  opt_goal: latency(for openevo)
+
+  OpenEvo:
+    parameters: ["run with extracted baseline, included in runtime"]
+      number_of_iterations: 20
+      modell: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+    metrics:
+      time: [real: 7m52.524s, user: 23m51.367s]
+      score: [energy: 5.60169e+10, latency: 1.64296328e+08]
+
+    OpenEvo:
+    parameters: ["run with extracted baseline, included in runtime", "a,b,c)"]
+      number_of_iterations: 50
+      modell: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+    metrics:
+      time: [real: 12m51.796s, user: 42m19.321s]
+      score: [energy: 1.2743175656e+010, latency: 1.3302049e+07]
+                                                               
+    OpenEvo:
+    parameters: ["run with extracted baseline, included in runtime, a,b,c)"]
+      number_of_iterations: 100
+      modell: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+    metrics:
+      time: [real: 2m30.207s, user: 5m37.245s]
+      score: [energy: 6.874653309e+09, latency: 7.810371e+06]
+  ZigZag:
+    metrics:
+      time: [real: 1m6.227, user: 1m7.031s]
+      score: [energy: 1.86e+09, latency: 1.57e+07]
+
+test_2:
+  inputs: [workload: "resnet50_inferred.onnx", hardware: "aimc.yaml"]
+  opt_goal: latency
+
+  OpenEvo:
+    parameters:
+      number_of_iterations: 50
+      modell: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+    metrics:
+      time: [real: 26m11,806s, user: 90m16,437s]
+      score: [energy: 1.1608895059e+10, latency: 1.2979619e+07]
+
+  ZigZag:
+    metrics:
+      time: [real: 2m35.982s, user: 2m36.577s]
+      score: [energy: 2.22e+10, latency: 2.65e+07]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################
+test_n:
+  inputs: [workload: , hardware:]
+  opt_goal:
+
+  OpenEvo:
+    parameters:
+      number_of_iterations:
+      modell:
+    metrics:
+      time: [real: , user:]
+      score: [energy: , latency:]
+
+  ZigZag:
+    metrics:
+      time: [real: , user:]
+      score: [energy: , latency:]

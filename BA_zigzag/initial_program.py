@@ -25,17 +25,30 @@ mapping = [{'name': 'default',
             'spatial_mapping': {'D1': ['K, 8', 'C, 4'], 'D2': ['C, 6']},
             'memory_operand_links': {'O': 'O', 'W': 'I2', 'I': 'I1'}}]
 
-#best result after run 1.1:
-mapping = [{'name': 'default',
-            'spatial_mapping': {'D1': ['K, 32'], 'D2': ['C, 3', 'C, 2']},
+    mapping = [{'name': 'default',
+            'spatial_mapping': {'D1': ['K, 8', 'C, 4'], 'D2': ['C, 6']},
             'memory_operand_links': {'O': 'O', 'W': 'I2', 'I': 'I1'}}]
+#current best, v2.2
+mapping = [{
+                'name': 'default',
+                'spatial_mapping': {
+                    'D1': ['K, 128'],         # Full utilization of D1 dimension
+                    'D2': ['C, 128']          # Full utilization of D2 dimension
+                },
+                'memory_operand_links': {
+                    'O': 'O',   # Output to output buffer
+                    'W': 'I2',  # Weight to I2 (local buffer) - maximizes reuse
+                    'I': 'I1'   # Input to I1 (local buffer)
+                }
+            }]
 """
 
 def generate_mapping():
 # EVOLVE-BLOCK-START
     mapping = [{'name': 'default',
-            'spatial_mapping': {'D1': ['K, 8', 'C, 4'], 'D2': ['C, 6']},
+            'spatial_mapping': {'D1': ['K, 64'], 'D2': ['C, 128']},
             'memory_operand_links': {'O': 'O', 'W': 'I2', 'I': 'I1'}}]
+
 # EVOLVE-BLOCK-END
 
     return handling(mapping)
