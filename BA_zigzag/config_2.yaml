@@ -1,35 +1,44 @@
-aktueller workflow:
-ich habe gegeben:
--hardwareconfig.yaml
--workload (modell.onnx)
--inital_programm() enthält baseline loopmapping (handkopiert)
--evaluator versucht dieses mapping zu verbessern
-
-bisherige probleme und deren lösung:
--problem: openevolve ist gut zum code evolven, nicht nur daten
-->inital_programm() ist eine art wrapper
-
--problem: initial_program enthält i.d.R. eine schlechte baseline (genereller start führt zu vielen
-ungültigen mappings)
--> zigzag gültiges mapping für hardware und workload generieren lassen, das als baseline zum 
-evolven nehmen
--->infos aus json extrahieren | daraus python dict bauen | nur code des dicts ausgeben | code in initial program schreiben
-
--problem: openevos ergebnis war nicht besonders gut
-->verbesserungen angewendet: a)provided hardware config in promt, b) fine-tune metric calculation, c) add modell description to promt"
-
--problem: main.py in zigzag ist hardcoded auf bestimmte inputs
--> parser hinzufügen
-
--problem: zigzag nimmt nur inferred .onnx modelle
-->programm geschrieben was die modelle inferred 
+#-------------------------------------------------------------------------------
+max_iterations: 100
+checkpoint_interval: 10
+log_level: "INFO"
 
 
-python main.py --model zigzag/inputs/workload/alexnet.onnx --accelerator zigzag/inputs/hardware/aimc.yaml --mapping /home/ansi/Documents/openevolve/BA_zigzag/zigzag_inputs/baseline_mappings/baseline.yaml
+# LLM configuration
+#von claude vorgeschlagen
+llm:
+  api_base: "https://llm.scads.ai/v1"
+  #primary_model: "zai-org/GLM-5.2-FP8"
+  primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model_weight: 1.0
+  secondary_model: "openai/gpt-oss-120b"
+  secondary_model_weight: 0.0
+  temperature: 0.55
+  top_p: 0.95
+  max_tokens: 8192
+  timeout: 180
 
-//cut from the config.yaml, maybe include agiang later 
+#backup
+#llm:
+  #provider: "ollama"            
+  #primary_model: "qwen2.5-coder:latest"
+  #primary_model_weight: 1.0 
+  #secondary_model: "llama3.1"
+  #secondary_model_weight: 0.0
+  #api_base: "http://localhost:11434/v1"
+  #temperature: 0.7
+  #top_p: 0.95
+  #max_tokens: 4096
+  #timeout: 600
 
-The given hardware is amic.yaml provided by ZigZag, here the hardware definition:
+
+# Prompt configuration
+prompt:
+  system_message: |
+    You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework (including CIM/CNM).
+    The given hardware is AIMC. The given workload is resnet50.onnx.
+
+    The given hardware is amic.yaml provided by ZigZag, here the hardware definition:
     name: aimc
 
     memories:
@@ -164,11 +173,31 @@ The given hardware is amic.yaml provided by ZigZag, here the hardware definition
       dimensions: [D1, D2]
       sizes: [128, 128]
 
-    Improve the `generate_mapping` function to produce a better mapping. Optimize for:
-    - Data reuse: keep high-reuse loops close to the compute array; minimize costly re-fetches from higher memory levels.
-    - Loop order: innermost = highest reuse for the most memory-costly operand; outermost = lowest reuse.
-    - Spatial unrolling: choose dimensions/factors that fully utilize the array (no underutilization), maximize reuse via parallel broadcast/accumulation, and leave a well-factorizable remainder.
-    - Tiling granularity: consider splitting one large temporal loop into multiple smaller tiled loops across memory levels if it lowers energy-delay product.
-    - CIM/CNM: minimize redundant row/column activations and writes; exploit in-memory accumulation where possible.
-    - Goal: minimize latency reported by the evaluator. Use prior scores/errors to guide changes; make targeted changes and avoid repeating previously invalid mappings.
-    You can try to expand the  Add, Pooling 
+
+    Improve the spatial loop mapping to produce a better mapping. 
+    IMPORTANT: do NOT implement a temporal_ordering part and temporal_mapping part
+
+
+  num_top_programs: 2
+  use_template_stochasticity: true
+
+# Database configuration
+database:
+  population_size: 35  #changed: (70->35) Larger population for more diversity
+  archive_size: 15  #changed: (30->15)
+  num_islands: 5
+  elite_selection_ratio: 0.3
+  exploitation_ratio: 0.6  # Slightly lower to encourage exploration
+
+# Evaluator configuration
+evaluator:
+  timeout: 180  # Extended timeout to allow for more complex optimization
+  cascade_evaluation: false #changed: true -> false; a runtime warning suggested the change
+  cascade_thresholds: [0.5, 0.8]
+  parallel_evaluations: 2 #changed: 4->2 because of API backend rate limiting
+  use_llm_feedback: true
+
+# Evolution settings
+diff_based_evolution: false
+allow_full_rewrites: true
+max_code_length: 2000

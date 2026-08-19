@@ -19,8 +19,8 @@ from zigzag.parser.mapping_validator import MappingValidator
 
 #TODO: set correct paths
 
-WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet50_infer.onnx"
-ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
+WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet18.onnx"
+ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/tesla_npu_like.yaml"
 DUMP_FOLDER_PATH = "BA_zigzag/zigzag_output"
 PICKLE_PATH = "BA_zigzag/zigzag_output"
 

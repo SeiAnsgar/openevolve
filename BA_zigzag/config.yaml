@@ -40,53 +40,39 @@ llm:
 prompt:
   system_message: |
     You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework (including CIM/CNM).
-    The given hardware is amic.yaml provided by ZigZag, here the hardware definition:
-    name: aimc
+
+    The given hardware is tesla_npu_like.yaml provided by ZigZag, here the hardware definition:
+
+
+    name: npu_like
 
     memories:
-      cells:
-        size: 8
-        r_cost: 0
-        w_cost: 0.095
-        area: 0
-        latency: 0
-        operands: [I2]
-        ports:
-          - name: rw_port_1
-            type: read_write
-            bandwidth_min: 8
-            bandwidth_max: 8
-            allocation: 
-              - I2, fh
-              - I2, tl
-        served_dimensions: [] # Fully unrolled over all multipliers
-
       rf_1B:
         size: 8
-        r_cost: 0.021
-        w_cost: 0.021
+        r_cost: 0.01
+        w_cost: 0.01
         area: 0
         latency: 1
-        operands: [I1]
+        operands: [I2]
         ports:
           - name: r_port_1
             type: read
             bandwidth_min: 8
             bandwidth_max: 8
             allocation: 
-              - I1, tl
+              - I2, tl
           - name: w_port_1
             type: write
             bandwidth_min: 8
             bandwidth_max: 8
             allocation: 
-              - I1, fh
-        served_dimensions: [D1]
+              - I2, fh
+        served_dimensions: [D2, D3]
 
-      rf_2B:
-        size: 16
-        r_cost: 0.021
-        w_cost: 0.021
+      rf_4B:
+        size: 32
+        r_cost: 0.022
+        w_cost: 0.022
         area: 0
         latency: 1
         operands: [O]
@@ -115,12 +101,56 @@ prompt:
             bandwidth_max: 16
             allocation: 
               - O, fl
-        served_dimensions: [D2]
+        served_dimensions: []
 
-      sram_256KB:
-        size: 262144
-        r_cost: 416.16
-        w_cost: 378.4
+      sram_1KB_I:
+        size: 8192
+        r_cost: 4.78
+        w_cost: 5.59
+        area: 0
+        latency: 1
+        operands: [I1]
+        ports:
+          - name: r_port_1
+            type: read
+            bandwidth_min: 64
+            bandwidth_max: 256
+            allocation: 
+              - I1, tl
+          - name: w_port_1
+            type: write
+            bandwidth_min: 64
+            bandwidth_max: 256
+            allocation: 
+              - I1, fh
+        served_dimensions: [D1, D2, D3]
+
+      sram_1KB_W:
+        size: 8192
+        r_cost: 4.78
+        w_cost: 5.59
+        area: 0
+        latency: 1
+        operands: [I2]
+        ports:
+          - name: r_port_1
+            type: read
+            bandwidth_min: 64
+            bandwidth_max: 256
+            allocation: 
+              - I2, tl
+          - name: w_port_1
+            type: write
+            bandwidth_min: 64
+            bandwidth_max: 256
+            allocation: 
+              - I2, fh
+        served_dimensions: [D1, D2, D3]
+
+      sram_1MB_A:
+        size: 8388608
+        r_cost: 208.08
+        w_cost: 189.2
         area: 0
         latency: 1
         operands: [I1, O]
@@ -128,7 +158,7 @@ prompt:
           - name: r_port_1
             type: read
             bandwidth_min: 64
-            bandwidth_max: 512
+            bandwidth_max: 1024
             allocation: 
               - I1, tl
               - O, tl
@@ -136,12 +166,34 @@ prompt:
           - name: w_port_1
             type: write
             bandwidth_min: 64
-            bandwidth_max: 512
+            bandwidth_max: 1024
             allocation: 
               - I1, fh
               - O, fh
               - O, fl
-        served_dimensions: [D1, D2]
+        served_dimensions: [D1, D2, D3]
+
+      sram_1MB_W:
+        size: 8388608
+        r_cost: 208.08
+        w_cost: 189.2
+        area: 0
+        latency: 1
+        operands: [I2]
+        ports:
+          - name: r_port_1
+            type: read
+            bandwidth_min: 64
+            bandwidth_max: 1024
+            allocation: 
+              - I2, tl
+          - name: w_port_1
+            type: write
+            bandwidth_min: 64
+            bandwidth_max: 1024
+            allocation: 
+              - I2, fh
+        served_dimensions: [D1, D2, D3]
 
       dram:
         size: 10000000000
@@ -164,55 +216,30 @@ prompt:
               - O, tl
               - O, fl
               - O, th
-        served_dimensions: [D1, D2]
+        served_dimensions: [D1, D2, D3]
 
     operational_array:
-      is_imc: True
-      imc_type: analog
-      input_precision: [8, 8] # unit: bit
-      bit_serial_precision: 2 # unit: bit
-      adc_resolution: 8 # unit: bit
-      dimensions: [D1, D2]
-      sizes: [128, 128]
+      unit_energy: 0.04 # pJ
+      unit_area: 1 # unit
+      dimensions: [D1, D2, D3]
+      sizes: [32, 32, 4]
 
 
-    The given workload is the resnet50.onnx model. 
+    Improve the spatial loop mapping to produce a better mapping. 
+    You can try to use a third dimension D3
 
-    Improve the `generate_mapping` function to produce a better mapping. Optimize for:
-    - Data reuse: keep high-reuse loops close to the compute array; minimize costly re-fetches from higher memory levels.
-    - Loop order: innermost = highest reuse for the most memory-costly operand; outermost = lowest reuse.
-    - Spatial unrolling: choose dimensions/factors that fully utilize the array (no underutilization), maximize reuse via parallel broadcast/accumulation, and leave a well-factorizable remainder.
-    - Tiling granularity: consider splitting one large temporal loop into multiple smaller tiled loops across memory levels if it lowers energy-delay product.
-    - CIM/CNM: minimize redundant row/column activations and writes; exploit in-memory accumulation where possible.
-    - Goal: minimize latency reported by the evaluator. Use prior scores/errors to guide changes; make targeted changes and avoid repeating previously invalid mappings.
-    You can try to expand the  Add, Pooling 
+    IMPORTANT: do NOT implement a temporal_ordering part and temporal_mapping part
+    
   #IMPORTANT: do NOT implement a temporal_ordering part and temporal_mapping part
 
-#    Syntax hints for temporal ordering section:
-#    - it has to be list type
-#    - entries have to be [name, number] pairs
-
- #   Hard constraints (never violate):
- #   - Each loop dimension must be fully factorized: spatial factor x product of temporal factors == original size.
- #   - All factors must be exact integer divisors.
- #   - Spatial unroll factors must not exceed the hardware array size on that axis.
- #   - Keep the mapping dict schema unchanged (core_allocation, spatial_mapping, temporal_ordering, memory_operand_links).
-
-    
-
-#    Output format (strict):
-#    - Return ONLY the modified `generate_mapping` function as raw Python code.
-#    - Do NOT include comments, docstrings, print statements, or explanations anywhere in the code.
-#    - Do NOT add extra variables, alternative mappings, helper functions, or unused code.
-#    - The function must contain only the minimal code required to define and return the mapping.
 
   num_top_programs: 2
   use_template_stochasticity: true
 
 # Database configuration
 database:
-  population_size: 35  #(70->35) Larger population for more diversity
-  archive_size: 15  #(30->15)
+  population_size: 35  #changed: (70->35) Larger population for more diversity
+  archive_size: 15  #changed: (30->15)
   num_islands: 5
   elite_selection_ratio: 0.3
   exploitation_ratio: 0.6  # Slightly lower to encourage exploration
@@ -220,12 +247,12 @@ database:
 # Evaluator configuration
 evaluator:
   timeout: 180  # Extended timeout to allow for more complex optimization
-  cascade_evaluation: false #changed: true -> false;a runtime warning suggested the change
+  cascade_evaluation: false #changed: true -> false; a runtime warning suggested the change
   cascade_thresholds: [0.5, 0.8]
-  parallel_evaluations: 4
-  use_llm_feedback: false
+  parallel_evaluations: 2 #changed: 4->2 because of API backend rate limiting
+  use_llm_feedback: true
 
 # Evolution settings
-diff_based_evolution: true
-allow_full_rewrites: false  # Definitely allow full rewrites
+diff_based_evolution: false
+allow_full_rewrites: true
 max_code_length: 2000

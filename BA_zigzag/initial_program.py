@@ -46,11 +46,11 @@ mapping = [{
 def generate_mapping():
 # EVOLVE-BLOCK-START
     mapping = [{'name': 'default',
-            'spatial_mapping': {'D1': ['K, 64'], 'D2': ['C, 128']},
+            'spatial_mapping': {'D1': ['K, 64'], 'D2': ['C, 64']},
             'memory_operand_links': {'O': 'O', 'W': 'I2', 'I': 'I1'}}]
 
 # EVOLVE-BLOCK-END
-
+    #mapping = yaml.safe_load(mapping_yaml)
     return handling(mapping)
 
 
