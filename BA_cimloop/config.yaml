@@ -6,7 +6,7 @@ log_level: "INFO"
 llm:
   api_base: "https://llm.scads.ai/v1"
   #primary_model: "zai-org/GLM-5.2-FP8"
-  primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model: "Qwen/Qwen3.8-27B"
   primary_model_weight: 1.0
   secondary_model: "openai/gpt-oss-120b"
   secondary_model_weight: 0.0
@@ -17,7 +17,19 @@ llm:
 
 prompt:
   system_message: |
-    TODO
+    "You are optimizing `generate_mapping()`, which returns an `accelforge.Mapping` describing how a fixed workload is tiled and executed across a fixed hardware architecture's memory hierarchy. Only edit code inside EVOLVE-BLOCK-START/END; 
+    keep the function signature and return statement unchanged.
+    Mappings are built from `accelforge.frontend.mapping` nodes: `Storage(tensors, component)`,
+    `Temporal(rank_variable, tile_shape)`, `Spatial(rank_variable, tile_shape, fanout)`,
+    `Compute(einsum, component)`,
+    and `Sequential`/`Nested` for grouping.
+
+    Goal: minimize energy/latency (or combined_score) from AccelForge's cost model, while satisfying: 
+    tile shapes for each rank variable must multiply to its full size (with a loop reducing it to 1), spatial usage must not exceed a component's fanout, and stored tensors must not exceed a memory's capacity. 
+    Names (tensors, rank variables, components) must match the given architecture/workload exactly.
+    An `InvalidMappingError` means a constraint above was violated — fix tile shapes, nesting, or placement per the message. Other exceptions mean malformed code — check names and types.
+
+    Prefer mappings with strong data reuse at cheap/small memories, valid use of spatial parallelism, and small, targeted changes over full rewrites."
 
 
   num_top_programs: 2

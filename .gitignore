@@ -1,4 +1,9 @@
-#My feature/BA branch
+
+#feature/BA branch for cimloop
+BA_cimloop/inputs/
+
+
+#My feature/BA branch for zigzag
 results/
 lm_eval/prompts/system_message.txt
 lm_eval/prompts/evaluator_system_message.txt
