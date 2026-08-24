@@ -1,5 +1,4 @@
 import os
-
 import importlib.util
 import traceback
 
@@ -11,13 +10,15 @@ from accelforge.model.main import evaluate_mapping, InvalidMappingError
 from accelforge.util.parallel import set_n_parallel_jobs
 #from _load_spec import get_spec
 
-LOAD_SPEC_PATH = "~/Documents/cimloop/accelforge/examples/arches/compute_in_memory/_load_spec.py"
-_load_spec_module_spec = importlib.util.spec_from_file_location("_load_spec", LOAD_SPEC_PATH)
+#/home/ansi/Documents/cimloop/accelforge/examples/arches/compute_in_memory/_load_spec.py
+
+LOAD_SPEC_PATH = "/home/ansi/Documents/cimloop/accelforge/examples/arches/compute_in_memory/_load_spec.py"
+_load_spec_module_spec = importlib.util.spec_from_file_location("get_spec", LOAD_SPEC_PATH)
 _load_spec_module = importlib.util.module_from_spec(_load_spec_module_spec)
 _load_spec_module_spec.loader.exec_module(_load_spec_module)
 get_spec = _load_spec_module.get_spec
 
-ARCH_NAME = "BA_cimloop/inputs/arch/albireo_isca_2021"          # Name ohne .yaml, wie von get_spec() erwartet
+ARCH_NAME = "/home/ansi/Documents/openevolve/BA_cimloop/inputs/arch/albireo_isca_2021"          # Name ohne .yaml, wie von get_spec() erwartet
 BATCH_SIZE = 1
 
 set_n_parallel_jobs(1)
