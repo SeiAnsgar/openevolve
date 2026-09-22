@@ -3,9 +3,11 @@
 
 #run zigzag with: time python main.py --model zigzag/inputs/workload/resnet18.onnx --accelerator zigzag/inputs/hardware/aimc.yaml --mapping /home/ansi/Documents/openevolve/BA_zigzag/zigzag_inputs/baseline_mappings/baseline.yaml
  
-test_1:
+#IMPORTANT: CHECK unit for latency AND energy
+
+test_1_1:
   inputs: [workload: "resnet18.onnx", hardware: "amic.yaml"]
-  opt_goal: latency(for openevo)
+  opt_goal: latency
 
   OpenEvo:
     parameters: ["run with extracted baseline, included in runtime"]
@@ -21,7 +23,7 @@ test_1:
       modell: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
     metrics:
       time: [real: 12m51.796s, user: 42m19.321s]
-      score: [energy: 1.2743175656e+010, latency: 1.3302049e+07]
+      score: [energy: 1.2743175656e+10, latency: 1.3302049e+07]
                                                                
     OpenEvo:
     parameters: ["run with extracted baseline, included in runtime, a,b,c)"]
@@ -30,15 +32,81 @@ test_1:
     metrics:
       time: [real: 2m30.207s, user: 5m37.245s]
       score: [energy: 6.874653309e+09, latency: 7.810371e+06]
+
   ZigZag:
+    parameters: 
+      nb_spatioal_mappings: (not set, mapping.yaml given)
     metrics:
       time: [real: 1m6.227, user: 1m7.031s]
-      score: [energy: 1.86e+09, latency: 1.57e+07]
+      score: [energy: 1.27e+10, latency: 1.57e+07]
 
-test_2:
+    parameters: 
+      nb_spatioal_mappings: 3
+    metrics:
+      time: [real: 3m14,232s, user: 3m14,899s]
+      score: [energy: 5.21e+09, latency: 5.62e+06]
+    
+    parameters: 
+      nb_spatioal_mappings: 10
+    metrics:
+      time: [real: 10m46.283s, user: 10m46.283s]
+      score: [energy: 4.99e+09, latency: 5.60e+06]
+
+#################################
+test_1_2:
+  test_2_2:
+  inputs: [workload: "resnet18.onnx", hardware: "aimc.yaml"]
+  opt_goal: energy
+
+  OpenEvo:
+    parameters:
+      number_of_iterations: 20
+      modell: "Qwen/Qwen3.8-27B"
+    metrics:
+      time: [real: , user: 23m34s]
+      score: [energy: 7.53e+09, latency: 8.61e+06]
+  OpenEvo:
+    parameters:
+      number_of_iterations: 100
+      modell: "Qwen/Qwen3.8-27B"
+    metrics:
+      time: [real: , user: ]
+      score: [energy: 6.874653309e+09, latency: 7.810371e+06]
+
+  ZigZag:
+    parameters:
+      nb_spatioal_mappings: none
+    metrics:
+      real: 1m9.125, user: 1m10.106s
+      score: [energy: 9.04e+09, latency: 1.58e+07]
+  #same for all
+  ZigZag:
+    parameters:
+      nb_spatioal_mappings: 3
+    metrics:
+      time: [real: 1m6,475s, user: 1m7,205s]
+      score: [energy: 9.04e+09, latency: 1.58e+07]
+  #SAME for all-done
+  ZigZag:
+    parameters:
+      nb_spatioal_mappings: 10
+    metrics:
+      time: [real: , user: ]
+      score: [energy: , latency: ]
+
+
+#######################
+test_2_1:
   inputs: [workload: "resnet50_inferred.onnx", hardware: "aimc.yaml"]
   opt_goal: latency
 
+  OpenEvo:
+    parameters:
+      number_of_iterations: 20
+      modell: "Qwen/Qwen3.8-27B"
+    metrics:
+      time: [real: , user: ]
+      score: [energy: , latency: ]
   OpenEvo:
     parameters:
       number_of_iterations: 50
@@ -46,20 +114,90 @@ test_2:
     metrics:
       time: [real: 26m11,806s, user: 90m16,437s]
       score: [energy: 1.1608895059e+10, latency: 1.2979619e+07]
+  OpenEvo:
+    parameters:
+      number_of_iterations: 100
+      modell: "Qwen/Qwen3.8-27B"
+    metrics:
+      time: [real: , user: ]
+      score: [energy: , latency: 
+  
+  #same for all
+  ZigZag:
+    metrics:
+    parameters:
+      nb_spatioal_mappings: none
+      time: [real:, user:]
+      score: [energy:, latency:]
+
+  ZigZag:
+    parameters:
+      nb_spatioal_mappings: 3
+    metrics:
+      time: [real:, user: 2m35,242s]
+      score: [energy: 2.22e+10, latency: 2.65e+07]
+  #same for all
+  ZigZag:
+    parameters:
+      nb_spatioal_mappings: 10
+    metrics:
+      time: [real: , user: ]
+      score: [energy: , latency: ]
+
+##############
+test_2_2:
+  inputs: [workload: "resnet50_inferred.onnx", hardware: "aimc.yaml"]
+  opt_goal: energy
+
+  OpenEvo:
+    parameters:
+      number_of_iterations: 20
+      modell: "Qwen/Qwen3.8-27B"
+    metrics:
+      time: [real: , user: ]
+      score: [energy: , latency: ]
+
+  OpenEvo:
+    parameters:
+      number_of_iterations: 100
+      modell: "Qwen/Qwen3.8-27B"
+    metrics:
+      time: [real: , user: ]
+      score: [energy: , latency: ]
 
   ZigZag:
     metrics:
-      time: [real: 2m35.982s, user: 2m36.577s]
-      score: [energy: 2.22e+10, latency: 2.65e+07]
+    parameters:
+      nb_spatioal_mappings: none
+      time: [real:, user: 2m34,491s]
+      score: [energy: 1.74e+10, latency: 2.80e+07]
 
+  ZigZag:
+    parameters:
+      nb_spatioal_mappings: 3
+    metrics:
+      time: [real:, user: 2m34,829s]
+      score: [energy: 1.74e+10, latency: 2.80e+07]
+  ZigZag:
+    parameters:
+      nb_spatioal_mappings: 10
+    metrics:
+      time: [real: , user: 2m32,821s]
+      score: [energy: 1.74e+10, latency: 2.80e+07]
 
+#########################was ist erforderlich:#######
 
+#->für alle: zigzag und openevo testen
+#->jeweils für: latency, power_consumption
+#diese modelle testen: {verschiedene größen desselben, noch 3. modell testen was was anderes ist}
 
+#anzahl_experimente = 2*2*3 (*1,5)= 12 (*anzahl iterationen)
 
-
-
-
-
+#jetzt: 
+#liste aller experimente erstllen
+#zigzag für alles durchführen
+#zigzag ergebnisse als baseline setzen (falls es dann keine lösung zeigt, schauen wie weit es kommt)
+#--> und damit alle openEvo ergebisse machen
 
 
 
@@ -69,6 +207,14 @@ test_2:
 test_n:
   inputs: [workload: , hardware:]
   opt_goal:
+
+  OpenEvo:
+    parameters:
+      number_of_iterations:
+      modell:
+    metrics:
+      time: [real: , user:]
+      score: [energy: , latency:]
 
   OpenEvo:
     parameters:

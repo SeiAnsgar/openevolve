@@ -20,7 +20,7 @@ from zigzag.parser.mapping_validator import MappingValidator
 #TODO: set correct paths
 
 WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet18.onnx"
-ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/tesla_npu_like.yaml"
+ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
 DUMP_FOLDER_PATH = "BA_zigzag/zigzag_output"
 PICKLE_PATH = "BA_zigzag/zigzag_output"
 
@@ -31,7 +31,7 @@ BASELINE_LATENCY = 64714023.0000
 def calculate_combined_score(valid, energy, latency) -> float:
     energy_score = (BASELINE_ENERGY / (energy + 1e-6))/100
     latency_score = BASELINE_LATENCY / (latency + 1e-6)
-    result = valid * 0.5 * (energy_score + latency_score)
+    result = valid * 0.5 * (2*energy_score + latency_score)
     return result
 
 
@@ -88,7 +88,7 @@ def evaluate(program_path: str) -> EvaluationResult:
             WORKLOAD_PATH,
             ACCELERATOR_PATH,
             mapping_path,
-            opt="latency",
+            opt="energy",
             dump_folder="BA_zigzag/zigzag_output/{datetime}.json",
             pickle_filename="BA_zigzag/zigzag_output/list_of_cmes.pickle"
         )
