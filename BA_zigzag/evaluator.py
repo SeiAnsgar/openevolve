@@ -1,6 +1,6 @@
 """
 run script with:
-python openevolve-run.py BA_zigzag/initial_program.py BA_zigzag/evaluator.py --config BA_zigzag/config.yaml --iterations 10
+python openevolve-run.py BA_zigzag/initial_program.py BA_zigzag/evaluator.py --config BA_zigzag/config_improved.yaml --iterations 10
 """
 
 #this is to prevent error messaages (caused by plotting during headless exec)
@@ -10,6 +10,7 @@ matplotlib.use("Agg")
 from zigzag import api  
 import importlib.util
 import traceback
+import tempfile
 import yaml
 from openevolve.evaluation_result import EvaluationResult
 from zigzag.api import get_hardware_performance_zigzag
@@ -19,7 +20,7 @@ from zigzag.parser.mapping_validator import MappingValidator
 
 #TODO: set correct paths
 
-WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/resnet18.onnx"
+WORKLOAD_PATH = "BA_zigzag/zigzag_inputs/models/mobilenetv2.onnx"
 ACCELERATOR_PATH = "BA_zigzag/zigzag_inputs/hardware/aimc.yaml"
 DUMP_FOLDER_PATH = "BA_zigzag/zigzag_output"
 PICKLE_PATH = "BA_zigzag/zigzag_output"
@@ -35,13 +36,13 @@ def calculate_combined_score(valid, energy, latency) -> float:
     return result
 
 
-def set_metric(valid: float, energy: float, latency: float, error_artifacts: dict[str, str]) -> EvaluationResult:    
+def set_metric(valid: float, energy: float, latency: float, error_artifacts: dict) -> EvaluationResult:
     return EvaluationResult(
         metrics={
-            "valid": valid,
-            "energy": energy,
-            "latency": latency,
-            "combined_score": calculate_combined_score(valid, energy, latency),
+            "valid": float(valid),
+            "energy": float(energy),
+            "latency": float(latency),
+            "combined_score": float(calculate_combined_score(valid, energy, latency)),
         },
         artifacts=error_artifacts
     )
@@ -84,19 +85,16 @@ def evaluate(program_path: str) -> EvaluationResult:
         #print("#########DEBUG##########")
         #print("mapping_path:")
         #print(mapping_path)
-        energy, latency, cme = api.get_hardware_performance_zigzag(
-            WORKLOAD_PATH,
-            ACCELERATOR_PATH,
-            mapping_path,
-            opt="energy",
-            dump_folder="BA_zigzag/zigzag_output/{datetime}.json",
-            pickle_filename="BA_zigzag/zigzag_output/list_of_cmes.pickle"
-        )
-        print("################ DEBUG ##############")
-        print("ZIGZAG EVALUATOR CALLED!")
-        error_artifacts = {}
-        return set_metric(1.0, energy, latency, error_artifacts)
-
+        with tempfile.TemporaryDirectory() as temp_dir:
+            energy, latency, cme = api.get_hardware_performance_zigzag(
+                WORKLOAD_PATH,
+                ACCELERATOR_PATH,
+                mapping_path,
+                opt="latency",
+                dump_folder=temp_dir,
+                pickle_filename=f"{temp_dir}/list_of_cmes.pickle"
+            )
+            return set_metric(1.0, energy, latency, {})
 
     except Exception as e:
         print(f"Evaluation failed at most basic step: {str(e)}")

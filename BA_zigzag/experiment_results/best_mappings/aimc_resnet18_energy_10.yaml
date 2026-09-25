@@ -1,0 +1,12 @@
+- name: default
+  spatial_mapping:
+    D1:
+    - K, 64
+    - FY, 2
+    D2:
+    - C, 64
+    - FX, 2
+  memory_operand_links:
+    O: O
+    W: I2
+    I: I1

@@ -1,0 +1,276 @@
+max_iterations: 100
+checkpoint_interval: 10
+log_level: "INFO"
+
+
+# LLM configuration
+llm:
+  api_base: "https://llm.scads.ai/v1"
+  primary_model: "Qwen/Qwen3.8-27B"
+  #primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model_weight: 1.0
+  secondary_model: "openai/gpt-oss-120b"
+  secondary_model_weight: 0.0
+  temperature: 0.8
+  top_p: 0.90
+  max_tokens: 8000
+  timeout: 180
+
+prompt:
+  system_message: |
+    You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework.
+    Your goal is to optimize the spatial mapping for an Analog In-Memory Computing (AIMC) accelerator running the mobilenetv2 workload.
+    You want to minimize energy consumption and latency.
+
+    Here is the hardware definition (aimc.yaml) provided by ZigZag:
+    name: aimc
+    memories:
+      cells:
+        size: 8
+        r_cost: 0
+        w_cost: 0.095
+        area: 0
+        latency: 0
+        operands: [I2]
+        ports:
+          - name: rw_port_1
+            type: read_write
+            bandwidth_min: 8
+            bandwidth_max: 8
+            allocation: 
+              - I2, fh
+              - I2, tl
+        served_dimensions: [] # Fully unrolled over all multipliers
+
+      rf_1B:
+        size: 8
+        r_cost: 0.021
+        w_cost: 0.021
+        area: 0
+        latency: 1
+        operands: [I1]
+        ports:
+          - name: r_port_1
+            type: read
+            bandwidth_min: 8
+            bandwidth_max: 8
+            allocation: 
+              - I1, tl
+          - name: w_port_1
+            type: write
+            bandwidth_min: 8
+            bandwidth_max: 8
+            allocation: 
+              - I1, fh
+        served_dimensions: [D1]
+
+      rf_2B:
+        size: 16
+        r_cost: 0.021
+        w_cost: 0.021
+        area: 0
+        latency: 1
+        operands: [O]
+        ports:
+          - name: r_port_1
+            type: read
+            bandwidth_min: 16
+            bandwidth_max: 16
+            allocation: 
+              - O, tl
+          - name: r_port_2
+            type: read
+            bandwidth_min: 16
+            bandwidth_max: 16
+            allocation: 
+              - O, th
+          - name: w_port_1
+            type: write
+            bandwidth_min: 16
+            bandwidth_max: 16
+            allocation: 
+              - O, fh
+          - name: w_port_2
+            type: write
+            bandwidth_min: 16
+            bandwidth_max: 16
+            allocation: 
+              - O, fl
+        served_dimensions: [D2]
+
+      sram_256KB:
+        size: 262144
+        r_cost: 416.16
+        w_cost: 378.4
+        area: 0
+        latency: 1
+        operands: [I1, O]
+        ports:
+          - name: r_port_1
+            type: read
+            bandwidth_min: 64
+            bandwidth_max: 512
+            allocation: 
+              - I1, tl
+              - O, tl
+              - O, th
+          - name: w_port_1
+            type: write
+            bandwidth_min: 64
+            bandwidth_max: 512
+            allocation: 
+              - I1, fh
+              - O, fh
+              - O, fl
+        served_dimensions: [D1, D2]
+
+      dram:
+        size: 10000000000
+        r_cost: 700
+        w_cost: 750
+        area: 0
+        latency: 1
+        operands: [I1, I2, O]
+        ports:
+          - name: rw_port_1
+            type: read_write
+            bandwidth_min: 64
+            bandwidth_max: 64
+            allocation: 
+              - I1, fh
+              - I1, tl
+              - I2, fh
+              - I2, tl
+              - O, fh
+              - O, tl
+              - O, fl
+              - O, th
+        served_dimensions: [D1, D2]
+
+    operational_array:
+      is_imc: True
+      imc_type: analog
+      input_precision: [8, 8] # unit: bit
+      bit_serial_precision: 2 # unit: bit
+      adc_resolution: 8 # unit: bit
+      dimensions: [D1, D2]
+      sizes: [128, 128]
+
+    WORKLOAD STRUCTURE (mobilenetv2 Layer Dimensions):
+    | Layer Name | Type | K (Out Ch) | C (In Ch) | Image Size (OX x OY) | Kernel (FX x FY) |
+    |---|---|---|---|---|---|
+    | /features/features.0/features.0.0/Conv | Conv | 32 | 3 | 112x112 | 3x3 |
+    | /features/features.1/conv/conv.0/conv.0.0/Conv | Conv | 32 | 1 | 112x112 | 3x3 |
+    | /features/features.1/conv/conv.1/Conv | Conv | 16 | 32 | 112x112 | 1x1 |
+    | /features/features.2/conv/conv.0/conv.0.0/Conv | Conv | 96 | 16 | 112x112 | 1x1 |
+    | /features/features.2/conv/conv.1/conv.1.0/Conv | Conv | 96 | 1 | 56x56 | 3x3 |
+    | /features/features.2/conv/conv.2/Conv | Conv | 24 | 96 | 56x56 | 1x1 |
+    | /features/features.3/conv/conv.0/conv.0.0/Conv | Conv | 144 | 24 | 56x56 | 1x1 |
+    | /features/features.3/conv/conv.1/conv.1.0/Conv | Conv | 144 | 1 | 56x56 | 3x3 |
+    | /features/features.3/conv/conv.2/Conv | Conv | 24 | 144 | 56x56 | 1x1 |
+    | /features/features.4/conv/conv.0/conv.0.0/Conv | Conv | 144 | 24 | 56x56 | 1x1 |
+    | /features/features.4/conv/conv.1/conv.1.0/Conv | Conv | 144 | 1 | 28x28 | 3x3 |
+    | /features/features.4/conv/conv.2/Conv | Conv | 32 | 144 | 28x28 | 1x1 |
+    | /features/features.5/conv/conv.0/conv.0.0/Conv | Conv | 192 | 32 | 28x28 | 1x1 |
+    | /features/features.5/conv/conv.1/conv.1.0/Conv | Conv | 192 | 1 | 28x28 | 3x3 |
+    | /features/features.5/conv/conv.2/Conv | Conv | 32 | 192 | 28x28 | 1x1 |
+    | /features/features.6/conv/conv.0/conv.0.0/Conv | Conv | 192 | 32 | 28x28 | 1x1 |
+    | /features/features.6/conv/conv.1/conv.1.0/Conv | Conv | 192 | 1 | 28x28 | 3x3 |
+    | /features/features.6/conv/conv.2/Conv | Conv | 32 | 192 | 28x28 | 1x1 |
+    | /features/features.7/conv/conv.0/conv.0.0/Conv | Conv | 192 | 32 | 28x28 | 1x1 |
+    | /features/features.7/conv/conv.1/conv.1.0/Conv | Conv | 192 | 1 | 14x14 | 3x3 |
+    | /features/features.7/conv/conv.2/Conv | Conv | 64 | 192 | 14x14 | 1x1 |
+    | /features/features.8/conv/conv.0/conv.0.0/Conv | Conv | 384 | 64 | 14x14 | 1x1 |
+    | /features/features.8/conv/conv.1/conv.1.0/Conv | Conv | 384 | 1 | 14x14 | 3x3 |
+    | /features/features.8/conv/conv.2/Conv | Conv | 64 | 384 | 14x14 | 1x1 |
+    | /features/features.9/conv/conv.0/conv.0.0/Conv | Conv | 384 | 64 | 14x14 | 1x1 |
+    | /features/features.9/conv/conv.1/conv.1.0/Conv | Conv | 384 | 1 | 14x14 | 3x3 |
+    | /features/features.9/conv/conv.2/Conv | Conv | 64 | 384 | 14x14 | 1x1 |
+    | /features/features.10/conv/conv.0/conv.0.0/Conv | Conv | 384 | 64 | 14x14 | 1x1 |
+    | /features/features.10/conv/conv.1/conv.1.0/Conv | Conv | 384 | 1 | 14x14 | 3x3 |
+    | /features/features.10/conv/conv.2/Conv | Conv | 64 | 384 | 14x14 | 1x1 |
+    | /features/features.11/conv/conv.0/conv.0.0/Conv | Conv | 384 | 64 | 14x14 | 1x1 |
+    | /features/features.11/conv/conv.1/conv.1.0/Conv | Conv | 384 | 1 | 14x14 | 3x3 |
+    | /features/features.11/conv/conv.2/Conv | Conv | 96 | 384 | 14x14 | 1x1 |
+    | /features/features.12/conv/conv.0/conv.0.0/Conv | Conv | 576 | 96 | 14x14 | 1x1 |
+    | /features/features.12/conv/conv.1/conv.1.0/Conv | Conv | 576 | 1 | 14x14 | 3x3 |
+    | /features/features.12/conv/conv.2/Conv | Conv | 96 | 576 | 14x14 | 1x1 |
+    | /features/features.13/conv/conv.0/conv.0.0/Conv | Conv | 576 | 96 | 14x14 | 1x1 |
+    | /features/features.13/conv/conv.1/conv.1.0/Conv | Conv | 576 | 1 | 14x14 | 3x3 |
+    | /features/features.13/conv/conv.2/Conv | Conv | 96 | 576 | 14x14 | 1x1 |
+    | /features/features.14/conv/conv.0/conv.0.0/Conv | Conv | 576 | 96 | 14x14 | 1x1 |
+    | /features/features.14/conv/conv.1/conv.1.0/Conv | Conv | 576 | 1 | 7x7 | 3x3 |
+    | /features/features.14/conv/conv.2/Conv | Conv | 160 | 576 | 7x7 | 1x1 |
+    | /features/features.15/conv/conv.0/conv.0.0/Conv | Conv | 960 | 160 | 7x7 | 1x1 |
+    | /features/features.15/conv/conv.1/conv.1.0/Conv | Conv | 960 | 1 | 7x7 | 3x3 |
+    | /features/features.15/conv/conv.2/Conv | Conv | 160 | 960 | 7x7 | 1x1 |
+    | /features/features.16/conv/conv.0/conv.0.0/Conv | Conv | 960 | 160 | 7x7 | 1x1 |
+    | /features/features.16/conv/conv.1/conv.1.0/Conv | Conv | 960 | 1 | 7x7 | 3x3 |
+    | /features/features.16/conv/conv.2/Conv | Conv | 160 | 960 | 7x7 | 1x1 |
+    | /features/features.17/conv/conv.0/conv.0.0/Conv | Conv | 960 | 160 | 7x7 | 1x1 |
+    | /features/features.17/conv/conv.1/conv.1.0/Conv | Conv | 960 | 1 | 7x7 | 3x3 |
+    | /features/features.17/conv/conv.2/Conv | Conv | 320 | 960 | 7x7 | 1x1 |
+    | /features/features.18/features.18.0/Conv | Conv | 1280 | 320 | 7x7 | 1x1 |
+    | /classifier/classifier.1/Gemm | Gemm | 1000 | 1280 | N/A (Vector) | N/A ||
+
+
+    TASK:
+    Improve the `mapping` list in the provided Python code to produce an optimal spatial mapping for Energy and Latency.
+
+    AIMC HARDWARE INTUITION:
+    - Dimension D1 serves Input Activations (rf_1B). Unrolling K, OX, or FX on D1 works very efficiently.
+    - Dimension D2 serves Outputs (rf_2B). Unrolling C, K, or OY on D2 works very efficiently.
+    - Maximize PE utilization: Aim for the product of loop sizes on D1 to be close to 128, and on D2 close to 128 (e.g., 64x2 or 32x4).
+
+    CRITICAL RULES & CONSTRAINTS (Violating these will crash the simulator):
+    
+    1. OPERATOR TARGETING: You CAN and SHOULD provide specific mapping dictionaries for 'Conv' and 'Gemm' operators in the `mapping` list, alongside a 'default' fallback.
+       Example structure:
+       mapping = [
+           {'name': 'Conv', 'spatial_mapping': {...}, 'memory_operand_links': ...},
+           {'name': 'Gemm', 'spatial_mapping': {...}, 'memory_operand_links': ...},
+           {'name': 'default', 'spatial_mapping': {...}, 'memory_operand_links': ...}
+       ]
+
+    2. GEMM LAYER RESTRICTION: The Gemm layer (Fully Connected) does NOT have spatial dimensions (OX, OY, FX, FY). 
+       You MUST ONLY use 'K', 'C', or 'B' for the Gemm spatial mapping! Using OX/OY/FX/FY for Gemm will crash the evaluator.
+
+    3. HARDWARE LIMITS: Operational array sizes are [128, 128] for [D1, D2].
+       The product of all unrolling sizes on D1 must NOT exceed 128.
+       The product of all unrolling sizes on D2 must NOT exceed 128.
+       Example valid multi-unrolling: {'D1': ['K, 32', 'OX, 4'], 'D2': ['C, 64']} (D1: 32*4=128 <= 128).
+
+    4. VALID DIMENSIONS: ONLY use these loop names: B, K, C, OY, OX, FY, FX.
+
+    5. SYNTAX FORMAT: Exactly 'Dimension, Size' strings in lists.
+       Correct: 'spatial_mapping': {'D1': ['K, 64'], 'D2': ['C, 32']}
+
+    6. KEEP REQUIRED KEYS: Do NOT delete `memory_operand_links` (`{'O': 'O', 'W': 'I2', 'I': 'I1'}`). 
+       Do NOT add `temporal_mapping` or `temporal_ordering`.
+
+    CRITICAL OUTPUT FORMAT:
+    Do NOT write any introduction, commentary, or prose before or after the code.
+
+  num_top_programs: 2
+  use_template_stochasticity: false #changed: true -> false
+
+# Database configuration
+database:
+  population_size: 35  #changed: (70->35) Larger population for more diversity
+  archive_size: 15  #changed: (30->15)
+  num_islands: 2
+  elite_selection_ratio: 0.3
+  exploitation_ratio: 0.6  # Slightly lower to encourage exploration
+
+# Evaluator configuration
+evaluator:
+  timeout: 360  # Extended timeout to allow for more complex optimization
+  cascade_evaluation: false #changed: true -> false; a runtime warning suggested the change
+  cascade_thresholds: [0.5, 0.8]
+  parallel_evaluations: 2 #changed: 4->2 because of API backend rate limiting
+  use_llm_feedback: false #changed: true->false because of racecondition problem
+
+# Evolution settings
+diff_based_evolution: false
+allow_full_rewrites: true
+max_code_length: 4096

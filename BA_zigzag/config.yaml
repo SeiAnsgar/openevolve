@@ -1,3 +1,4 @@
+#time python openevolve-run.py BA_zigzag/initial_program.py BA_zigzag/evaluator.py --config /home/ansi/Documents/openevolve/BA_zigzag/config_2.yaml --iterations 20
 #-------------------------------------------------------------------------------
 max_iterations: 100
 checkpoint_interval: 10
@@ -5,11 +6,10 @@ log_level: "INFO"
 
 
 # LLM configuration
-#von claude vorgeschlagen
 llm:
   api_base: "https://llm.scads.ai/v1"
-  #primary_model: "zai-org/GLM-5.2-FP8"
-  primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  primary_model: "Qwen/Qwen3.8-27B"
+  #primary_model: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
   primary_model_weight: 1.0
   secondary_model: "openai/gpt-oss-120b"
   secondary_model_weight: 0.0
@@ -18,61 +18,59 @@ llm:
   max_tokens: 8192
   timeout: 180
 
-#backup
-#llm:
-  #provider: "ollama"            
-  #primary_model: "qwen2.5-coder:latest"
-  #primary_model_weight: 1.0 
-  #secondary_model: "llama3.1"
-  #secondary_model_weight: 0.0
-  #api_base: "http://localhost:11434/v1"
-  #temperature: 0.7
-  #top_p: 0.95
-  #max_tokens: 4096
-  #timeout: 600
-
-
 # Prompt configuration
-#ideas what to include in promt:
-#-model name
-#hardware definition (could cause problems because hardware definition is long which could lead to too long promt.. test later)
-
 prompt:
   system_message: |
-    You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework (including CIM/CNM).
+    You are an expert in dataflow mapping optimization for DNN accelerators using the ZigZag framework (including CIM).
+    The given hardware is AIMC. The given workload is the resnet18.onnx model
 
-    The given hardware is tesla_npu_like.yaml provided by ZigZag, here the hardware definition:
-
-
-    name: npu_like
+    The given hardware is amic.yaml provided by ZigZag, here the hardware definition:
+    name: aimc
 
     memories:
+      cells:
+        size: 8
+        r_cost: 0
+        w_cost: 0.095
+        area: 0
+        latency: 0Qwen3.8-27B"
+        operands: [I2]
+        ports:
+          - name: rw_port_1
+            type: read_write
+            bandwidth_min: 8
+            bandwidth_max: 8
+            allocation: 
+              - I2, fh
+              - I2, tl
+        served_dimensions: [] # Fully unrolled over all multipliers
+
       rf_1B:
         size: 8
-        r_cost: 0.01
-        w_cost: 0.01
+        r_cost: 0.021
+        w_cost: 0.021
         area: 0
         latency: 1
-        operands: [I2]
+        operands: [I1]
         ports:
           - name: r_port_1
             type: read
             bandwidth_min: 8
             bandwidth_max: 8
             allocation: 
-              - I2, tl
+              - I1, tl
           - name: w_port_1
             type: write
             bandwidth_min: 8
             bandwidth_max: 8
             allocation: 
-              - I2, fh
-        served_dimensions: [D2, D3]
+              - I1, fh
+        served_dimensions: [D1]
 
-      rf_4B:
-        size: 32
-        r_cost: 0.022
-        w_cost: 0.022
+      rf_2B:
+        size: 16
+        r_cost: 0.021
+        w_cost: 0.021
         area: 0
         latency: 1
         operands: [O]
@@ -101,56 +99,12 @@ prompt:
             bandwidth_max: 16
             allocation: 
               - O, fl
-        served_dimensions: []
+        served_dimensions: [D2]
 
-      sram_1KB_I:
-        size: 8192
-        r_cost: 4.78
-        w_cost: 5.59
-        area: 0
-        latency: 1
-        operands: [I1]
-        ports:
-          - name: r_port_1
-            type: read
-            bandwidth_min: 64
-            bandwidth_max: 256
-            allocation: 
-              - I1, tl
-          - name: w_port_1
-            type: write
-            bandwidth_min: 64
-            bandwidth_max: 256
-            allocation: 
-              - I1, fh
-        served_dimensions: [D1, D2, D3]
-
-      sram_1KB_W:
-        size: 8192
-        r_cost: 4.78
-        w_cost: 5.59
-        area: 0
-        latency: 1
-        operands: [I2]
-        ports:
-          - name: r_port_1
-            type: read
-            bandwidth_min: 64
-            bandwidth_max: 256
-            allocation: 
-              - I2, tl
-          - name: w_port_1
-            type: write
-            bandwidth_min: 64
-            bandwidth_max: 256
-            allocation: 
-              - I2, fh
-        served_dimensions: [D1, D2, D3]
-
-      sram_1MB_A:
-        size: 8388608
-        r_cost: 208.08
-        w_cost: 189.2
+      sram_256KB:
+        size: 262144
+        r_cost: 416.16
+        w_cost: 378.4
         area: 0
         latency: 1
         operands: [I1, O]
@@ -158,7 +112,7 @@ prompt:
           - name: r_port_1
             type: read
             bandwidth_min: 64
-            bandwidth_max: 1024
+            bandwidth_max: 512
             allocation: 
               - I1, tl
               - O, tl
@@ -166,34 +120,12 @@ prompt:
           - name: w_port_1
             type: write
             bandwidth_min: 64
-            bandwidth_max: 1024
+            bandwidth_max: 512
             allocation: 
               - I1, fh
               - O, fh
               - O, fl
-        served_dimensions: [D1, D2, D3]
-
-      sram_1MB_W:
-        size: 8388608
-        r_cost: 208.08
-        w_cost: 189.2
-        area: 0
-        latency: 1
-        operands: [I2]
-        ports:
-          - name: r_port_1
-            type: read
-            bandwidth_min: 64
-            bandwidth_max: 1024
-            allocation: 
-              - I2, tl
-          - name: w_port_1
-            type: write
-            bandwidth_min: 64
-            bandwidth_max: 1024
-            allocation: 
-              - I2, fh
-        served_dimensions: [D1, D2, D3]
+        served_dimensions: [D1, D2]
 
       dram:
         size: 10000000000
@@ -204,7 +136,7 @@ prompt:
         operands: [I1, I2, O]
         ports:
           - name: rw_port_1
-            type: read_write
+            type: read_writeQwen3.8-27B"
             bandwidth_min: 64
             bandwidth_max: 64
             allocation: 
@@ -216,21 +148,20 @@ prompt:
               - O, tl
               - O, fl
               - O, th
-        served_dimensions: [D1, D2, D3]
+        served_dimensions: [D1, D2]
 
     operational_array:
-      unit_energy: 0.04 # pJ
-      unit_area: 1 # unit
-      dimensions: [D1, D2, D3]
-      sizes: [32, 32, 4]
+      is_imc: True
+      imc_type: analog
+      input_precision: [8, 8] # unit: bit
+      bit_serial_precision: 2 # unit: bit
+      adc_resolution: 8 # unit: bit
+      dimensions: [D1, D2]
+      sizes: [128, 128]
 
 
     Improve the spatial loop mapping to produce a better mapping. 
-    You can try to use a third dimension D3
-
     IMPORTANT: do NOT implement a temporal_ordering part and temporal_mapping part
-    
-  #IMPORTANT: do NOT implement a temporal_ordering part and temporal_mapping part
 
 
   num_top_programs: 2
